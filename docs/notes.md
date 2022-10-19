@@ -13,3 +13,10 @@
    ````shell
    pip install -r requirements.txt
     ````
+4. Create initial projet with rasa :
+   ````shell
+   rasa init
+   ````
+5. Idea for gui :
+
+   https://www.geeksforgeeks.org/gui-chat-application-using-tkinter-in-python/
