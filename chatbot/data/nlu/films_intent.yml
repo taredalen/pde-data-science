@@ -1,0 +1,15 @@
+version: "3.1"
+
+nlu:
+- intent: movie_watched_recently
+  examples: |
+    - I watched [Rashomon](film)
+    - [The rule of the game](film)
+    - [Pulp Fiction](film), it was great
+    - [The Artist](film), but I didn't like it
+    - last film I watched was [Frankenstein](film), it was quite good 
+    - I watched the great [Anatomy of a Murder](film)
+    - It was a bad movie, [Avenger Endgame](film)
+    - Recently I watched [A Better Tomorrow](film)
+    - Recently I watched [A Better Tomorrow II](film), it was great
+    - Recently I watched [Black Panther](film), it was so bad

@@ -1,0 +1,20 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-film_watched",
+      "2": "I-film_watched",
+      "3": "L-film_watched",
+      "4": "U-film_watched",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-film_watched": 1,
+      "I-film_watched": 2,
+      "L-film_watched": 3,
+      "U-film_watched": 4,
+      "O": 0
+    },
+    "num_tags": 5
+  }
+]

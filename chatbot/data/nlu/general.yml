@@ -1,0 +1,22 @@
+version: "3.1"
+
+nlu:
+  - intent: deny
+    examples: |
+      - no
+      - I don't
+      - no, thank you
+      - not now
+      - I don't wanna
+
+  - intent: affirm
+    examples: |
+      - yes
+      - of course
+      - obviously
+      - yep
+      - yeah
+      - yes yes
+      - right on
+
+

@@ -1,0 +1,32 @@
+version: "3.1"
+
+stories:
+  - story: ask user what movie they watched recently
+    steps:
+      - intent: smalltalk_greetings_hello
+      - action: utter_smalltalk_greetings_hello
+      - action: utter_did_watch_movie_recently
+
+  - story: if user affirm they watched something
+    steps: 
+      - action: utter_did_watch_movie_recently
+      - intent: affirm
+      - action: utter_what_was_the_film_watched_recently
+      - intent: movie_watched_recently
+        entities:
+          - film: from_entity
+      - action: utter_movie_watched_recently
+
+  - story: if user deny they watched something
+    steps: 
+      - action: utter_did_watch_movie_recently
+      - intent: deny
+      - action: utter_smalltalk_confirmation_no
+  
+  - story: if user watched something
+    steps: 
+      - action: utter_did_watch_movie_recently
+      - intent: movie_watched_recently
+        entities:
+          - film: from_entity
+      - action: utter_movie_watched_recently

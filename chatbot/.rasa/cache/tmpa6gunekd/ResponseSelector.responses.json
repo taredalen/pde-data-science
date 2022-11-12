@@ -1,0 +1,122 @@
+{
+  "utter_greetings/smalltalk_greetings_bye": [
+    {
+      "text": "See you soon!"
+    },
+    {
+      "text": "Bye-bye!"
+    },
+    {
+      "text": "Till next time!"
+    },
+    {
+      "text": "Bye."
+    }
+  ],
+  "utter_greetings/malltalk_greetings_goodevening": [
+    {
+      "text": "How is your day going?"
+    },
+    {
+      "text": "How's the day treating you so far?"
+    },
+    {
+      "text": "How's your day been?"
+    }
+  ],
+  "utter_greetings/smalltalk_greetings_goodmorning": [
+    {
+      "text": "How are you this morning?"
+    },
+    {
+      "text": "How's the morning treating you so far?"
+    },
+    {
+      "text": "Good morning! How are you today?"
+    }
+  ],
+  "utter_greetings/smalltalk_greetings_goodnight": [
+    {
+      "text": "Sleep tight!"
+    },
+    {
+      "text": "Have a good one!"
+    },
+    {
+      "text": "Talk to you soon!"
+    }
+  ],
+  "utter_greetings/smalltalk_greetings_hello": [
+    {
+      "text": "Hi there, friend!"
+    },
+    {
+      "text": "Hi!"
+    },
+    {
+      "text": "Hey!"
+    },
+    {
+      "text": "Hey there!"
+    },
+    {
+      "text": "Good day!"
+    },
+    {
+      "text": "Hello!"
+    },
+    {
+      "text": "Greetings!"
+    }
+  ],
+  "utter_greetings/smalltalk_greetings_how_are_you": [
+    {
+      "text": "Doing great, thanks."
+    },
+    {
+      "text": "I'm doing very well. Thanks!"
+    },
+    {
+      "text": "Feeling wonderful!"
+    },
+    {
+      "text": "Wonderful! Thanks for asking."
+    }
+  ],
+  "utter_greetings/smalltalk_greetings_nice_to_meet_you": [
+    {
+      "text": "It's nice meeting you, too."
+    },
+    {
+      "text": "Likewise. I'm looking forward to helping you out."
+    },
+    {
+      "text": "Nice meeting you, as well."
+    },
+    {
+      "text": "The pleasure is mine."
+    }
+  ],
+  "utter_greetings/smalltalk_greetings_nice_to_see_you": [
+    {
+      "text": "Likewise!"
+    },
+    {
+      "text": "So glad we meet again!"
+    },
+    {
+      "text": "Same here. I was starting to miss you."
+    }
+  ],
+  "utter_greetings/smalltalk_greetings_nice_to_talk_to_you": [
+    {
+      "text": "It sure was. We can chat again anytime."
+    },
+    {
+      "text": "I enjoy talking to you, too."
+    },
+    {
+      "text": "You know I'm here to talk anytime."
+    }
+  ]
+}

@@ -85,6 +85,9 @@ intents:
 - smalltalk_user_wants_to_see_agent_again
 - smalltalk_user_wants_to_talk
 - smalltalk_user_will_be_back
+- deny
+- affirm
+- movie_watched_recently
 
 actions:
 - utter_smalltalk_agent_acquaintance
@@ -171,6 +174,20 @@ actions:
 - utter_smalltalk_user_wants_to_see_agent_again
 - utter_smalltalk_user_wants_to_talk
 - utter_smalltalk_user_will_be_back
+- utter_did_watch_movie_recently
+- utter_movie_watched_recently
+- utter_what_was_the_film_watched_recently
+
+entities:
+- film
+
+slots: 
+  film:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: film
+      intent: movie_watched_recently
 
 responses:
   utter_smalltalk_agent_acquaintance:
@@ -606,3 +623,13 @@ responses:
     - text: "I'll be waiting."
     - text: "Okay. You know where to find me."
     - text: "All right. I'll be here."
+
+  utter_movie_watched_recently:
+    - text: "Oh, you watched {film}, I like it quite a lot"
+    - text: "{film} was so good, good for you"
+
+  utter_did_watch_movie_recently:
+    - text: "Did you watch any film recently ?"
+
+  utter_what_was_the_film_watched_recently:
+    - text: "What was it ?"
