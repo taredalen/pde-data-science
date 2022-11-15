@@ -1,0 +1,11 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJwtjNEJgDAMRFfJAE7QVUTKUYIU06ht6k/p7gb0797d49YxFxpX5SciWT410PhCVBQO9IPkZqzu9sbVnayOFqgViBjkiNi98JO7w0do4jm3F9FcJO0=": "utter_smalltalk_agent_acquaintance",
+    "eJyVjc0JgDAMhVfJAE7QVURCKEGKMWqbeind3YCeFW/vj++NrQ/Q9swnUrS0aYB2C1RaOcBjJBVj9W0tnH2T1K0FKCuJGMmCNHvgkKOSl6SR+we6mnHGV8LPv+kCiMpQzw==": "action_listen",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhODcxJ6ckMSc7PjEdKAAia2tjAZRmIS0=": "utter_smalltalk_agent_age",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhODcxJ6ckMSc7PjEdKAAiawmYWFpSkloUj00jcabHAgBwgUWP": "action_listen",
+    "eJwtisEJgDAMAFfJAE7QVURCkFCCaSptFKR0dwP6uztuHXOBcTa+kXaXagnGB2hUOMEvKt3Z4r06t3jEQj1BL6TqpAdSjoBkVh+xPOf2AkE5I2M=": "utter_smalltalk_agent_annoying",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3xEqhODcxJ6ckMSc7PjEdKBCfmJeXX5mZl15LwNjSkpLUonicukmwJxYA34FMMQ==": "action_listen"
+  }
+}

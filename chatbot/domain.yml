@@ -88,6 +88,7 @@ intents:
 - deny
 - affirm
 - movie_watched_recently
+- recent_movie
 
 actions:
 - utter_smalltalk_agent_acquaintance
@@ -177,6 +178,7 @@ actions:
 - utter_did_watch_movie_recently
 - utter_movie_watched_recently
 - utter_what_was_the_film_watched_recently
+- utter_recent_movie
 
 entities:
 - film
@@ -629,7 +631,12 @@ responses:
     - text: "{film} was so good, good for you"
 
   utter_did_watch_movie_recently:
-    - text: "Did you watch any film recently ?"
+    - text: "What movie did you watch?"
+    - text: "What it was?"
 
   utter_what_was_the_film_watched_recently:
-    - text: "What was it ?"
+    - text: "What was it?"
+
+  utter_recent_movie:
+    - text: "Oh, you watched {film}, I like it quite a lot"
+    - text: "{film} was so good, good for you"

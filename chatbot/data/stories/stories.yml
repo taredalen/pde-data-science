@@ -1,6 +1,10 @@
 version: "3.1"
 
 stories:
+- story: path_smalltalk_greetings_hello
+  steps:
+  - intent: smalltalk_greetings_hello
+  - action: utter_smalltalk_greetings_hello
 
 - story: path_smalltalk_agent_acquaintance
   steps:
@@ -272,10 +276,7 @@ stories:
   - intent: smalltalk_greetings_goodnight
   - action: utter_smalltalk_greetings_goodnight
 
-- story: path_smalltalk_greetings_hello
-  steps:
-  - intent: smalltalk_greetings_hello
-  - action: utter_smalltalk_greetings_hello
+
 
 - story: path_smalltalk_greetings_how_are_you
   steps:
