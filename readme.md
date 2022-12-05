@@ -14,3 +14,8 @@
     ````shell
      http://172.20.10.3:8081
     ````
+
+
+Api documentation: 
+- https://developers.themoviedb.org/3/getting-started/introduction
+- https://pypi.org/project/tmdbv3api/
