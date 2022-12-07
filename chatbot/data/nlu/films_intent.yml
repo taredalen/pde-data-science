@@ -1,6 +1,10 @@
 version: "3.1"
 
 nlu:
+  - regex: film
+    examples: | 
+      - \"'.*'.*\"
+
   - intent: movie_watched_recently
     examples: |
       - I watched ["Rashomon"](film)
@@ -54,12 +58,14 @@ nlu:
       - It was [Ace Ventura Pet Detective](film)
       - It was [Joker](film)
       
-      - [The Shawshank Redemption](film)
-      - [Who's Afraid of Virginia Woolf?](film)
-      - [12 Angry Men](film)
-      - [Sunrise: A Song of Two Humans](film)
-      - [The Lord of the Rings The Two Towers](film)
-      - [The rule of the game](film)
+      - ["The Shawshank Redemption"](film)
+      - ["Who's Afraid of Virginia Woolf?"](film)
+      - ["12 Angry Men"](film)
+      - ["Sunrise: A Song of Two Humans"](film)
+      - ["The Lord of the Rings The Two Towers"](film)
+      - ["The rule of the game"](film)
+      
+      
 
   - lookup: film
     examples: |    

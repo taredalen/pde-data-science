@@ -1,7 +1,5 @@
 version: "3.1"
 
-
-
 stories:
 
 - story: happy path + movie
