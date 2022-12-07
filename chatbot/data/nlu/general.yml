@@ -1,0 +1,104 @@
+version: "3.1"
+
+nlu:
+  - intent: deny
+    examples: |
+      - no
+      - I don't
+      - no, thank you
+      - not now
+      - I don't wanna
+
+  - intent: affirm
+    examples: |
+      - yes
+      - of course
+      - obviously
+      - yep
+      - yeah
+      - yes yes
+      - right on
+      - that's correct
+      - it's fine
+      - go ahead
+      - sounds good
+      - okay
+      - yes
+      - ok
+      - okie dokie
+      - sure
+      - go for it
+      - yeah
+      - yea
+      - do it
+      - of course
+      - I guess
+      - correct
+      - yeah sure
+      - why not
+      - please do
+      - sure is
+      - I agree
+      - I don't mind
+      - certainly
+      - exactly
+      - yes I agree
+      - I think so
+      - yes it is
+      - right
+      - okay then
+      - yes of course
+      - yes I do
+      - that s okay
+      - I do
+      - yup
+      - ya
+      - oh yes
+      - yes sure
+      - obviously
+      - k
+      - sure why not
+      - yeah right
+      - yeah of course
+      - absolutely
+      - yes indeed
+      - ok sure
+      - ok yes
+      - yes correct
+      - ok thank you
+      - sure thing
+      - ye
+      - confirm
+      - yep
+      - looks good
+      - yes thank you
+      - definitely
+      - yes right
+      - yes I would like to
+      - alrighty
+      - yes definitely
+      - yeh
+      - yes it is correct
+      - yeah that's right
+      - ok you can
+      - yap
+      - yes you may
+      - confirmed
+      - of course why not
+      - yes that's fine
+      - affirmative
+      - yeah go ahead
+      - yeah I'm sure
+      - okay sounds good
+      - okay that's fine
+      - yeah exactly
+      - that is ok
+      - this is correct
+      - ok go ahead
+      - yes this is correct
+      - nevermind its okay
+      - okey
+      - yes for sure
+      - all right
+  
+  

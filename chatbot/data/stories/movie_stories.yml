@@ -1,0 +1,28 @@
+version: "3.1"
+
+stories:
+
+- story: happy path + movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_movie
+  - intent: affirm
+  - action: utter_plot
+  - intent: movie_watched_recently
+    entities:
+      - film: from_entity
+  - action: utter_movie_watched_recently
+
+- story: happy path + no movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_movie
+  - intent: deny
+  - action: utter_goodbye
+

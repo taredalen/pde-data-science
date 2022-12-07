@@ -1,9 +1,25 @@
-
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
 language: en
 
 pipeline:
+  - name: SpacyNLP
+    model: en_core_web_md
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    entity_recognition: false
+    epochs: 200
+  - name: CRFEntityExtractor
+  - name: EntitySynonymMapper
+
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
 # # If you'd like to customize it, uncomment and adjust the pipeline.
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
@@ -33,7 +49,7 @@ policies:
   - name: MemoizationPolicy
   - name: TEDPolicy
     max_history: 20
-    epochs: 200
+    epochs: 100
   - name: RulePolicy
     nlu_threshold: 0.4
     core_threshold: 0.4

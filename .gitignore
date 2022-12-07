@@ -1,0 +1,7 @@
+/myenv
+chatbot/models
+/chatbot/models/
+/chatbot/api2.py
+/chatbot/api.py
+/chatbot/.rasa/
+/chatbot/.rasa/cache/

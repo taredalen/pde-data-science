@@ -1,0 +1,74 @@
+version: "3.1"
+
+nlu:
+  - regex: film
+    examples: | 
+      - \"'.*'.*\"
+
+  - intent: movie_watched_recently
+    examples: |
+      - I watched ["Rashomon"](film)
+      - I watched ["Dr. Strangelove"](film)
+      - I watched ["Singin' in the Rain"](film)
+      - I watched ["Gone with the Wind"](film)
+      - I watched [E.T. the Extra-Terrestrial](film)
+      - I watched [One Flew Over the Cuckoo's Nest](film)
+      - I watched [No Country for Old Men](film)
+      - I watched [The Lord of the Rings The Two Towers](film)
+      - I watched [The Good, the Bad and the Ugly](film)
+      - I watched [The Silence of the Lambs](film)
+      - I watched [The Godfather 2](film)
+      - I watched [The Godfather Part II](film)
+      - I watched [No Country for Old Men](film)
+      - I watched [Paddington 2](film) 
+      
+      - [Pulp Fiction](film), it was great
+      - [The Artist](film), but I didn't like it
+      - last film I watched was [Frankenstein](film), it was quite good 
+      - I watched the great [Anatomy of a Murder](film)
+      - It was a bad movie, [Avenger Endgame](film)
+      - I watched [A Better Tomorrow](film)
+      - I watched [A Better Tomorrow II](film), it was great
+      - I watched [Black Panther](film), it was so bad
+      
+      - I watched [Zombieland](film)
+      - I watched [Coco](film)
+      - I watched [The Silence of the Lambs](film)
+      - I watched [Ace Ventura Pet Detective](film)
+      - I watched [Match Point](film)
+      - I watched [The Hateful Eight](film)
+      - I watched [Ex Machina](film)
+      - I watched [Se7en](film)
+      - I watched [The Bridge on the River Kwai](film)
+      
+      - I watched [Sicario](film)
+      - I watched [Inside Out](film)
+      - I watched [Slow West](film)
+      - I watched [The big short](film)
+      - I watched [The Ballad of Buster Scruggs](film)
+      - I watched [The Hateful Eight](film)
+      - I watched [Mission Impossible Fallout](film)
+      - I watched [I am not a witch](film)
+      - I watched [Avengers Endgame](film)
+      
+      - It was [The Lord of the Rings: The Fellowship of the Ring](film)
+      - It was [Butch Cassidy and the Sundance Kid](film)
+      - It was [Kill Bill](film)
+      - It was [Schindler's List](film)
+      - It was [Ace Ventura Pet Detective](film)
+      - It was [Joker](film)
+      
+      - ["The Shawshank Redemption"](film)
+      - ["Who's Afraid of Virginia Woolf?"](film)
+      - ["12 Angry Men"](film)
+      - ["Sunrise: A Song of Two Humans"](film)
+      - ["The Lord of the Rings The Two Towers"](film)
+      - ["The rule of the game"](film)
+      
+      
+
+  - lookup: film
+    examples: |    
+      - Filmworker
+      - Leave No Trace
+      - Joker
