@@ -144,6 +144,8 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - not so good
+    - could be better
 
 
 - intent: bot_challenge
