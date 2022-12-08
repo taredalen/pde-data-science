@@ -65,7 +65,16 @@ nlu:
       - ["The Lord of the Rings The Two Towers"](film)
       - ["The rule of the game"](film)
       
+
+  - regex: plot
+    examples: | 
+      - \"'.*'.*\"      
       
+  - intent: movie_plot
+    examples: |
+      - It was about ["a dog and a little girl"](plot)
+      - I don't remember everything but there was [" a group of teenagers hunting for monsters. They had a van that was green and blue"](plot)
+      - It told the story of ["a young couple going to a festival in Sweden with some friends and it was a horror film"] (plot)
 
   - lookup: film
     examples: |    

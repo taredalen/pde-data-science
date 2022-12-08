@@ -13,9 +13,11 @@ intents:
   - mood_unhappy
   - bot_challenge
   - movie_watched_recently
+  - movie_plot
 
 entities:
   - film
+  - plot
 
 slots:
   film:
@@ -23,6 +25,12 @@ slots:
     mappings:
     - type: from_entity
       entity: film
+
+  plot:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: plot
 
 responses:
   utter_greet:
@@ -56,6 +64,13 @@ responses:
 
   utter_plot:
   - text: "Okay! Write the plot of the movie title you are looking for."
+
+  utter_title:
+    - text: "Do you remember the title of it ?"
+
+  utter_title_question:
+    - text: " Great! Type it out "
+
 
   utter_movie_watched_recently:
     - text: "Oh, you watched {film}, I like it quite a lot"
