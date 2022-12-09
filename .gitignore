@@ -6,3 +6,4 @@ api.py
 /chatbot/.rasa/cache/
 .env
 /chatbot/credentials.yml
+.idea

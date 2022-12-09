@@ -1,24 +1,26 @@
 1. In terminal 1 (from chatbot): 
-    ````shell
+    ````yml
     rasa run --enable-api --cors "*"
     ````
 2. In terminal 2 start server (from chatbot): 
-    ````shell
-    python -m http.server 8000
+    ````yml
+    rasa run actions
     ````
-3. From chatroom, first delete yarn.lock file then build and launch:
-   ````shell
-    yarn install
-    ````
-   ````shell
-    yarn serve
-    ````
-4. Bot enable on : 
-    ````shell
-     http://172.20.10.3:8081
+3. For network connexion follow instructions from next link:
+   ````yml
+   https://ngrok.com/download
+   ````
+4. I'm using Telegram, so I added this to credentials.yml: 
+    ````yml
+   telegram:
+   access_token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   verify: rasa_bot
+   webhook_url: https://52b1-37.eu.ngrok.io/webhooks/telegram/webhook
     ````
 
+5. For API configuration you need to generate token and add to .env file.
 
-Api documentation: 
-- https://developers.themoviedb.org/3/getting-started/introduction
-- https://pypi.org/project/tmdbv3api/
+   Useful documentation:
+
+   - https://developers.themoviedb.org/3/getting-started/introduction
+   - https://pypi.org/project/tmdbv3api/
