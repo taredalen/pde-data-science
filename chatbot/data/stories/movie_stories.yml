@@ -9,12 +9,21 @@ stories:
   - intent: mood_great
   - action: utter_happy
   - action: utter_movie
-  - intent: affirm
+  - intent: deny
   - action: utter_plot
   - intent: movie_watched_recently
     entities:
       - film: from_entity
   - action: utter_movie_watched_recently
+
+- story: sad path + movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: affirm
+  - action: action_get_movie_recommendation
 
 - story: happy path + no movie
   steps:

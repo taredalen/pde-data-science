@@ -21,7 +21,6 @@ nlu:
       - I watched [The Godfather Part II](film)
       - I watched [No Country for Old Men](film)
       - I watched [Paddington 2](film) 
-      
       - [Pulp Fiction](film), it was great
       - [The Artist](film), but I didn't like it
       - last film I watched was [Frankenstein](film), it was quite good 
@@ -30,7 +29,6 @@ nlu:
       - I watched [A Better Tomorrow](film)
       - I watched [A Better Tomorrow II](film), it was great
       - I watched [Black Panther](film), it was so bad
-      
       - I watched [Zombieland](film)
       - I watched [Coco](film)
       - I watched [The Silence of the Lambs](film)
@@ -40,7 +38,6 @@ nlu:
       - I watched [Ex Machina](film)
       - I watched [Se7en](film)
       - I watched [The Bridge on the River Kwai](film)
-      
       - I watched [Sicario](film)
       - I watched [Inside Out](film)
       - I watched [Slow West](film)
@@ -50,22 +47,18 @@ nlu:
       - I watched [Mission Impossible Fallout](film)
       - I watched [I am not a witch](film)
       - I watched [Avengers Endgame](film)
-      
       - It was [The Lord of the Rings: The Fellowship of the Ring](film)
       - It was [Butch Cassidy and the Sundance Kid](film)
       - It was [Kill Bill](film)
       - It was [Schindler's List](film)
       - It was [Ace Ventura Pet Detective](film)
       - It was [Joker](film)
-      
       - ["The Shawshank Redemption"](film)
       - ["Who's Afraid of Virginia Woolf?"](film)
       - ["12 Angry Men"](film)
       - ["Sunrise: A Song of Two Humans"](film)
       - ["The Lord of the Rings The Two Towers"](film)
       - ["The rule of the game"](film)
-      
-      
 
   - lookup: film
     examples: |    

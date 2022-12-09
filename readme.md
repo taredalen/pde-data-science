@@ -6,8 +6,11 @@
     ````shell
     python -m http.server 8000
     ````
-3. Launch once all dependencies are installed (from chatroom):
-     ````shell
+3. From chatroom, first delete yarn.lock file then build and launch:
+   ````shell
+    yarn install
+    ````
+   ````shell
     yarn serve
     ````
 4. Bot enable on : 

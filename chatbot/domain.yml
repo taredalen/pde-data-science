@@ -16,6 +16,7 @@ intents:
 
 entities:
   - film
+  - movie_recommendation
 
 slots:
   film:
@@ -23,14 +24,24 @@ slots:
     mappings:
     - type: from_entity
       entity: film
+  movie_recommendation:
+    type: any
+    mappings:
+    - type: from_text
+      entity: movie_recommendation
+
 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
+  - text: "Heeey! How it's going?"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "I'm sad about it. Do you want some movie recommendations to cheer you up?"
+  - text: "I'm sorry for this. Do you want some movie recommendations to cheer you up?"
+
+  utter_recommand_movie_on_mood:
+    - text: "There is my recommendation"
 
   utter_did_that_help:
   - text: "Did that help you?"
@@ -58,9 +69,10 @@ responses:
   - text: "Okay! Write the plot of the movie title you are looking for."
 
   utter_movie_watched_recently:
-    - text: "Oh, you watched {film}, I like it quite a lot"
-    - text: "{film} was so good, good for you"
+  - text: "Oh, you watched {film}, I like it quite a lot"
+  - text: "{film} was so good, good for you"
 
 actions:
   - action_movie_search
   - utter_movie_watched_recently
+  - action_get_movie_recommendation

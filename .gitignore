@@ -1,7 +1,8 @@
 /myenv
 chatbot/models
 /chatbot/models/
-/chatbot/api2.py
-/chatbot/api.py
+api.py
 /chatbot/.rasa/
 /chatbot/.rasa/cache/
+.env
+/chatbot/credentials.yml

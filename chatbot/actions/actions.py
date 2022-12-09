@@ -1,27 +1,34 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
+import os
+from dotenv import load_dotenv
+
+from tmdbv3api import TMDb
+from tmdbv3api import Movie
+
+from typing import Any, Text, Dict, List
+
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
+load_dotenv()
+
+tmdb = TMDb()
+movie = Movie()
+tmdb.api_key = os.getenv("TMDB_API")
 
 
-# This is a simple example for a custom action which utters "Hello World!"
+class ActionHelloWorld(Action):
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+    def name(self) -> Text:
+         return "action_get_movie_recommendation"
+
+    def run(self, dispatcher, tracker, domain):
+
+        search = movie.search("Corpse Bride")
+
+        first_result = search[0]
+
+        #response = 'https://image.tmdb.org/t/p/original' + first_result.poster_path
+        response = tracker.latest_action_name
+        dispatcher.utter_message(response)
+
+
