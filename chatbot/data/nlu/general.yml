@@ -8,6 +8,73 @@ nlu:
       - no, thank you
       - not now
       - I don't wanna
+      - how about no
+      - don t have a sense
+      - no
+      - don't
+      - I don't want that
+      - I disagree
+      - disagree
+      - I don't want
+      - not interested
+      - I don't think so
+      - no way
+      - no it isn't
+      - no I don't
+      - I'm not
+      - na
+      - no that's fine thank you
+      - never
+      - I said no
+      - of course not
+      - nah
+      - no tanks
+      - no never
+      - no need
+      - no thanks
+      - no sorry
+      - do not
+      - not today
+      - no it's not
+      - absolutely not
+      - not that
+      - nooo
+      - nope
+      - I don't want to
+      - no I would not
+      - let 's not
+      - not needed
+      - not this time
+      - no don't do that
+      - thanks but no thanks
+      - no that's wrong
+      - not this
+      - definitely not
+      - not at this time
+      - not exactly
+      - no don't
+      - not really no
+      - no thank you not right now
+      - actually no
+      - no leave it
+      - sorry no
+      - no incorrect
+      - nope sorry
+      - I say no
+      - not really
+      - not right now thanks
+      - I think no
+      - absolutely no
+      - no actually
+      - apparently not
+      - no do not
+      - no just no
+      - no but thank you
+      - no need thanks
+      - no thank you though
+      - no thank you very much
+      - no thanks not right now
+      - no forget
 
   - intent: affirm
     examples: |
@@ -18,5 +85,88 @@ nlu:
       - yeah
       - yes yes
       - right on
-
-
+      - that's correct
+      - it's fine
+      - go ahead
+      - sounds good
+      - okay
+      - yes
+      - ok
+      - okie dokie
+      - sure
+      - go for it
+      - yeah
+      - yea
+      - do it
+      - of course
+      - I guess
+      - correct
+      - yeah sure
+      - why not
+      - please do
+      - sure is
+      - I agree
+      - I don't mind
+      - certainly
+      - exactly
+      - yes I agree
+      - I think so
+      - yes it is
+      - right
+      - okay then
+      - yes of course
+      - yes I do
+      - that s okay
+      - I do
+      - yup
+      - ya
+      - oh yes
+      - yes sure
+      - obviously
+      - k
+      - sure why not
+      - yeah right
+      - yeah of course
+      - absolutely
+      - yes indeed
+      - ok sure
+      - ok yes
+      - yes correct
+      - ok thank you
+      - sure thing
+      - ye
+      - confirm
+      - yep
+      - looks good
+      - yes thank you
+      - definitely
+      - yes right
+      - yes I would like to
+      - alrighty
+      - yes definitely
+      - yeh
+      - yes it is correct
+      - yeah that's right
+      - ok you can
+      - yap
+      - yes you may
+      - confirmed
+      - of course why not
+      - yes that's fine
+      - affirmative
+      - yeah go ahead
+      - yeah I'm sure
+      - okay sounds good
+      - okay that's fine
+      - yeah exactly
+      - that is ok
+      - this is correct
+      - ok go ahead
+      - yes this is correct
+      - nevermind its okay
+      - okey
+      - yes for sure
+      - all right
+  
+  
+  

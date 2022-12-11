@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-country",
+      "2": "I-country",
+      "3": "L-country",
+      "4": "U-country",
+      "5": "B-film",
+      "6": "I-film",
+      "7": "L-film",
+      "8": "U-film",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-country": 1,
+      "I-country": 2,
+      "L-country": 3,
+      "U-country": 4,
+      "B-film": 5,
+      "I-film": 6,
+      "L-film": 7,
+      "U-film": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

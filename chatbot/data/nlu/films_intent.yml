@@ -13,3 +13,13 @@ nlu:
     - Recently I watched [A Better Tomorrow](film)
     - Recently I watched [A Better Tomorrow II](film), it was great
     - Recently I watched [Black Panther](film), it was so bad
+    - It was [The good, the bad and the ugly](film)
+    - Something bad, [Jugatsu](film)
+    - Something good, [Sonatine](film)
+    - A terrible film, [Quo Vadis](film)
+    - Last thing I watched was [Yojimbo](film)
+
+- intent: ask_for_cinema_nearby
+  examples: |
+    - I want to know what are the cinema nearby
+    - What cinemas are there nearby

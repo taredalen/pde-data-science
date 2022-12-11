@@ -30,3 +30,92 @@ stories:
         entities:
           - film: from_entity
       - action: utter_movie_watched_recently
+
+
+  - story: interactive_story_1
+    steps:
+    - intent: ask_for_cinema_nearby
+    - action: get_adress_form
+    - active_loop: get_adress_form
+    - slot_was_set:
+      - requested_slot: country
+    - slot_was_set:
+      - country: France
+    - slot_was_set:
+      - requested_slot: city
+    - slot_was_set:
+      - city: Paris
+    - slot_was_set:
+      - requested_slot: address
+    - slot_was_set:
+      - address: bamboo
+    - slot_was_set:
+      - requested_slot: confirm_address
+    - slot_was_set:
+      - confirm_address: false
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: action_get_cinema_near
+    - slot_was_set:
+      - country: null
+    - slot_was_set:
+      - city: null
+    - slot_was_set:
+      - address: null
+    - slot_was_set:
+      - confirm_address: null
+    - intent: affirm
+    - action: get_adress_form
+    - active_loop: get_adress_form
+    - slot_was_set:
+      - requested_slot: country
+    - slot_was_set:
+      - country: France
+    - slot_was_set:
+      - requested_slot: city
+    - slot_was_set:
+      - city: Meudon
+    - slot_was_set:
+      - requested_slot: address
+    - slot_was_set:
+      - address: 9 avenue Marcellin Berthelot
+    - slot_was_set:
+      - requested_slot: confirm_address
+    - slot_was_set:
+      - confirm_address: true
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: action_get_cinema_near
+    - intent: smalltalk_appraisal_thank_you
+    - action: utter_smalltalk_appraisal_well_done
+
+  - story: interactive_story_2
+    steps:
+    - intent: ask_for_cinema_nearby
+    - action: get_adress_form
+    - active_loop: get_adress_form
+    - slot_was_set:
+      - requested_slot: country
+    - slot_was_set:
+      - country: France
+    - slot_was_set:
+      - requested_slot: city
+    - slot_was_set:
+      - city: Paris
+    - slot_was_set:
+      - requested_slot: address
+    - slot_was_set:
+      - address: 11 rue blanche
+    - slot_was_set:
+      - requested_slot: confirm_address
+    - slot_was_set:
+      - confirm_address: true
+    - slot_was_set:
+      - requested_slot: null
+    - active_loop: null
+    - action: action_get_cinema_near
+    - intent: smalltalk_appraisal_thank_you
+    - action: utter_smalltalk_appraisal_well_done
+
