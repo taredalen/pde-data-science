@@ -175,3 +175,13 @@ WebDriver BiDi listening on ws://127.0.0.1:51578
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofileTe6QF9\\search.json.mozlz4", (void 0)))
 DevTools listening on ws://127.0.0.1:51578/devtools/browser/6fc9eb0a-db61-446e-8430-42d7b69f62e5
 JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+1670859077452	geckodriver	INFO	Listening on 127.0.0.1:51644
+1670859080548	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51645" "-no-remote" "-profile" "C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofilenQXiWJ"
+1670859081243	Marionette	INFO	Marionette enabled
+1670859081248	Marionette	INFO	Listening on port 51650
+WebDriver BiDi listening on ws://127.0.0.1:51645
+1670859081671	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofilenQXiWJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51645/devtools/browser/5751e74b-aa76-4cac-ba02-520ee4199c24
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
