@@ -5,6 +5,7 @@ session_config:
   carry_over_slots_to_new_session: true
 
 intents:
+  - start
   - greet
   - goodbye
   - affirm
@@ -13,10 +14,12 @@ intents:
   - mood_unhappy
   - bot_challenge
   - movie_watched_recently
+  - movie_recommendation_description
 
 entities:
   - film
   - movie_recommendation
+  - movie_description
 
 slots:
   film:
@@ -29,6 +32,11 @@ slots:
     mappings:
     - type: from_text
       entity: movie_recommendation
+  movie_description:
+    type: any
+    mappings:
+      - type: from_text
+        entity: movie_description
 
 
 responses:
@@ -42,6 +50,9 @@ responses:
 
   utter_recommand_movie_on_mood:
     - text: "There is my recommendation"
+
+  utter_getting_description:
+   - text: "Ok, getting weather of [movie_description] ..."
 
   utter_did_that_help:
   - text: "Did that help you?"
@@ -76,3 +87,4 @@ actions:
   - action_movie_search
   - utter_movie_watched_recently
   - action_get_movie_recommendation
+  - action_get_movie_description

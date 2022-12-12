@@ -7,3 +7,4 @@ api.py
 .env
 /chatbot/credentials.yml
 .idea
+/chatbot/out.log

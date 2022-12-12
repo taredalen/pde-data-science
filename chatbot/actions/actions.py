@@ -1,8 +1,9 @@
 import os
+import random
+
 from dotenv import load_dotenv
 
-from tmdbv3api import TMDb
-from tmdbv3api import Movie
+from tmdbv3api import TMDb, Movie, Discover
 
 from typing import Any, Text, Dict, List
 
@@ -13,22 +14,41 @@ load_dotenv()
 
 tmdb = TMDb()
 movie = Movie()
-tmdb.api_key = os.getenv("TMDB_API")
+discover = Discover()
 
+tmdb.api_key = os.getenv('TMDB_API')
 
-class ActionHelloWorld(Action):
+class Movie:
+    def __init__(self, description, title):
+        self._description = description
 
+    def get_description(self):
+        return self._description
+
+    def set_description(self, value):
+        self._description = value
+
+current_movie = Movie('description', 'title')
+
+class ActionRecommendMovie(Action):
     def name(self) -> Text:
-         return "action_get_movie_recommendation"
+         return 'action_get_movie_recommendation'
 
     def run(self, dispatcher, tracker, domain):
+        comedies = discover.discover_movies({'with_genres': 35}) # comedy
+        random_comedy = random.choice(comedies)
 
-        search = movie.search("Corpse Bride")
+        title = random_comedy.title
+        poster = 'https://image.tmdb.org/t/p/original' + random_comedy.poster_path
+        overview = random_comedy.overview
+        current_movie.set_description(overview)
 
-        first_result = search[0]
+        dispatcher.utter_message(title, poster)
 
-        #response = 'https://image.tmdb.org/t/p/original' + first_result.poster_path
-        response = tracker.latest_action_name
-        dispatcher.utter_message(response)
+class ActionDescription(Action):
+    def name(self) -> Text:
+         return 'action_get_movie_description'
 
-
+    def run(self, dispatcher, tracker, domain):
+        description = current_movie.get_description()
+        dispatcher.utter_message(description)

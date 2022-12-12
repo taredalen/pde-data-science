@@ -24,6 +24,8 @@ stories:
   - action: utter_cheer_up
   - intent: affirm
   - action: action_get_movie_recommendation
+  - intent: movie_recommendation_description
+  - action: action_get_movie_description
 
 - story: happy path + no movie
   steps:

@@ -24,3 +24,4 @@
 
    - https://developers.themoviedb.org/3/getting-started/introduction
    - https://pypi.org/project/tmdbv3api/
+   - https://github.com/AnthonyBloomer/tmdbv3api

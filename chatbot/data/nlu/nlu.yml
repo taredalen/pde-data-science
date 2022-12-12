@@ -1,7 +1,10 @@
 version: "3.1"
 
 nlu:
-
+- intent: start
+  examples: |
+    - /start
+    - start
 - intent: goodbye
   examples: |
     - okay see you later

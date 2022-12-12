@@ -1,6 +1,20 @@
 version: "3.1"
 
 nlu:
+  - intent: movie_recommendation_description
+      examples: |
+        - Can I have description?
+        - Description
+        - Can i see the plot?
+        - Plot?
+
+  - intent: movie_recommendation_description
+    examples: |
+      - Can I have description?
+      - Description
+      - Can i see the plot?
+      - Plot?
+
   - regex: film
     examples: | 
       - \"'.*'.*\"
@@ -59,6 +73,7 @@ nlu:
       - ["Sunrise: A Song of Two Humans"](film)
       - ["The Lord of the Rings The Two Towers"](film)
       - ["The rule of the game"](film)
+      
 
   - lookup: film
     examples: |    
