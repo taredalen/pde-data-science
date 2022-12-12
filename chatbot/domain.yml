@@ -27,7 +27,7 @@ slots:
       entity: film
 
   plot:
-    type: text
+    type: any
     mappings:
     - type: from_entity
       entity: plot

@@ -64,7 +64,12 @@ nlu:
       - ["Sunrise: A Song of Two Humans"](film)
       - ["The Lord of the Rings The Two Towers"](film)
       - ["The rule of the game"](film)
-      
+
+  - lookup: film
+    examples: |    
+      - Filmworker
+      - Leave No Trace
+      - Joker
 
   - regex: plot
     examples: | 
@@ -72,12 +77,15 @@ nlu:
       
   - intent: movie_plot
     examples: |
-      - It was about ["a dog and a little girl"](plot)
-      - I don't remember everything but there was [" a group of teenagers hunting for monsters. They had a van that was green and blue"](plot)
-      - It told the story of ["a young couple going to a festival in Sweden with some friends and it was a horror film"] (plot)
+      - It was about [a dog and a little girl](plot)
+      - It was about [a man and his family going to a isolated hotel and going mad and trying to kill them](plot)
+      - It was about [a serial killer named Jack that has OCD and it shows how his mental illness impacts his killings.](plot)
+      - I don't remember everything but there was [a group of teenagers hunting for monsters and ghosts. They had a van that was green and blue](plot)
+      - It told the story of [a young couple going to a festival in Sweden with some friends and it turning out to be a cult] (plot)
+      - I think it was about [](plot)
 
-  - lookup: film
+  - lookup: plot
     examples: |    
-      - Filmworker
-      - Leave No Trace
-      - Joker
+      - a dog and a little girl
+      - a man and his family going to a recluse house and going mad and trying to kill them
+      - a young couple going to a festival in Sweden with some friends and it turning out to be a cult

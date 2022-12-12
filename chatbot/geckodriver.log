@@ -1,0 +1,177 @@
+1670850101650	geckodriver	INFO	Listening on 127.0.0.1:49440
+1670850104711	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49441" "-no-remote" "-profile" "C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofilepx4boa"
+1670850105583	Marionette	INFO	Marionette enabled
+1670850105587	Marionette	INFO	Listening on port 49446
+WebDriver BiDi listening on ws://127.0.0.1:49441
+1670850105992	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofilepx4boa\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49441/devtools/browser/b3ab08d3-072e-44c4-a616-8b55d7ad225b
+1670850124332	Marionette	INFO	Stopped listening on port 49446
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1670850570959	geckodriver	INFO	Listening on 127.0.0.1:49508
+1670850574043	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49509" "-no-remote" "-profile" "C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofileHWoMKr"
+1670850574810	Marionette	INFO	Marionette enabled
+1670850574814	Marionette	INFO	Listening on port 49514
+WebDriver BiDi listening on ws://127.0.0.1:49509
+1670850575232	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofileHWoMKr\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49509/devtools/browser/2e2e99eb-505d-4702-a453-57afde5760de
+1670850811829	geckodriver	INFO	Listening on 127.0.0.1:49565
+1670850814937	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49566" "-no-remote" "-profile" "C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofile2AbSbk"
+1670850815724	Marionette	INFO	Marionette enabled
+1670850815729	Marionette	INFO	Listening on port 49571
+WebDriver BiDi listening on ws://127.0.0.1:49566
+1670850816118	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofile2AbSbk\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49566/devtools/browser/231986a6-bc0a-4f43-ab1f-344ef2553e70
+1670851016644	Marionette	INFO	Stopped listening on port 49571
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "49631" "-no-remote" "-profile" "C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofile00h333"
+1670850952570	Marionette	INFO	Marionette enabled
+1670850952575	Marionette	INFO	Listening on port 49636
+WebDriver BiDi listening on ws://127.0.0.1:49631
+1670850953133	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofile00h333\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49631/devtools/browser/25bc7004-cca4-4e9d-8dec-7585a0fc7937
+JavaScript error: resource:///modules/UrlbarInput.sys.mjs, line 3933: TypeError: engines is undefined
+1670851813693	geckodriver	INFO	Listening on 127.0.0.1:49713
+1670851816781	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49714" "-no-remote" "-profile" "C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofile5vEBrO"
+1670851817575	Marionette	INFO	Marionette enabled
+1670851817580	Marionette	INFO	Listening on port 49719
+WebDriver BiDi listening on ws://127.0.0.1:49714
+1670851818216	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofile5vEBrO\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49714/devtools/browser/dff03d5f-8aa7-4fef-aadd-8fbdffea1b7a
+1670852035617	geckodriver	INFO	Listening on 127.0.0.1:49883
+1670852038723	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49884" "-no-remote" "-profile" "C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofileyx0rMz"
+1670852040257	Marionette	INFO	Marionette enabled
+1670852040268	Marionette	INFO	Listening on port 49889
+WebDriver BiDi listening on ws://127.0.0.1:49884
+1670852040979	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofileyx0rMz\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49884/devtools/browser/f5ab8f1c-07f9-484b-9ccb-905333eff0d0
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 574: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1670852834142	Marionette	INFO	Stopped listening on port 49889
+1670853332069	geckodriver	INFO	Listening on 127.0.0.1:50130
+1670853335200	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50131" "-no-remote" "-profile" "C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofile8GmhjS"
+1670853335989	Marionette	INFO	Marionette enabled
+1670853335994	Marionette	INFO	Listening on port 50136
+WebDriver BiDi listening on ws://127.0.0.1:50131
+1670853336481	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofile8GmhjS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50131/devtools/browser/3584991b-37af-46bf-9054-8c81a1ecc26d
+1670854315291	Marionette	INFO	Stopped listening on port 50136
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1670854929275	geckodriver	INFO	Listening on 127.0.0.1:50766
+1670854932371	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50767" "-no-remote" "-profile" "C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofileplNAb5"
+1670854933081	Marionette	INFO	Marionette enabled
+1670854933088	Marionette	INFO	Listening on port 50772
+WebDriver BiDi listening on ws://127.0.0.1:50767
+1670854933501	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofileplNAb5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50767/devtools/browser/ee092d80-d786-4c92-822f-34cedff8f3fd
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 676"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:676:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:520:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2154:35
+addAllSources@resource://devtools/server/actors/thread.js:1486:14
+watch@resource://devtools/server/actors/resources/sources.js:78:17
+watchResources@resource://devtools/server/actors/resources/index.js:302:19
+addSessionDataEntry@resource://devtools/server/actors/targets/session-data-processors/resources.js:11:21
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:46:25
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:528:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:437:21
+Line: 676, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://32983644-836c-4787-9743-58ad0f3a0613/injections/js/bug1772949-youtube-webshare-shim.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 676"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:676:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:520:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2154:35
+addAllSources@resource://devtools/server/actors/thread.js:1486:14
+watch@resource://devtools/server/actors/resources/sources.js:78:17
+watchResources@resource://devtools/server/actors/resources/index.js:302:19
+addSessionDataEntry@resource://devtools/server/actors/targets/session-data-processors/resources.js:11:21
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:46:25
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:528:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:437:21
+Line: 676, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 676: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 676: Failed to open input source 'moz-extension://32983644-836c-4787-9743-58ad0f3a0613/injections/js/bug1772949-youtube-webshare-shim.js'
+1670855586460	geckodriver	INFO	Listening on 127.0.0.1:50901
+1670855589578	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50902" "-no-remote" "-profile" "C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofileKL7Jxj"
+1670855590226	Marionette	INFO	Marionette enabled
+1670855590230	Marionette	INFO	Listening on port 50907
+WebDriver BiDi listening on ws://127.0.0.1:50902
+1670855590645	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofileKL7Jxj\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50902/devtools/browser/d8352eb6-7f85-475e-814f-bbcf91a29719
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+SourceActor threw an exception: [Exception... "Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 676"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:676:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:520:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2154:35
+addAllSources@resource://devtools/server/actors/thread.js:1486:14
+watch@resource://devtools/server/actors/resources/sources.js:78:17
+watchResources@resource://devtools/server/actors/resources/index.js:302:19
+addSessionDataEntry@resource://devtools/server/actors/targets/session-data-processors/resources.js:11:21
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:46:25
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:528:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:437:21
+Line: 676, column: 0
+console.error: ({})
+SourceActor threw an exception: [Exception... "Failed to open input source 'moz-extension://0fb8e1f4-b12d-4510-8c47-e3e7eef26994/injections/js/bug1772949-youtube-webshare-shim.js'"  nsresult: "0x805303f4 (<unknown>)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: mainThreadFetch/< :: line 676"  data: yes]
+Stack: mainThreadFetch/<@resource://devtools/shared/DevToolsUtils.js:676:15
+mainThreadFetch@resource://devtools/shared/DevToolsUtils.js:520:10
+_fetchURLContents@resource://devtools/server/actors/utils/sources-manager.js:446:22
+urlContents@resource://devtools/server/actors/utils/sources-manager.js:410:17
+_resurrectSource@resource://devtools/server/actors/thread.js:2154:35
+addAllSources@resource://devtools/server/actors/thread.js:1486:14
+watch@resource://devtools/server/actors/resources/sources.js:78:17
+watchResources@resource://devtools/server/actors/resources/index.js:302:19
+addSessionDataEntry@resource://devtools/server/actors/targets/session-data-processors/resources.js:11:21
+addSessionDataEntry@resource://devtools/server/actors/targets/target-actor-mixin.js:46:25
+_addSessionDataEntry@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:528:24
+receiveMessage@resource://devtools/server/connectors/js-window-actor/DevToolsFrameChild.sys.mjs:437:21
+Line: 676, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 676: Failed to open input source 'resource://gre/modules/ExtensionContent.jsm'
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 676: Failed to open input source 'moz-extension://0fb8e1f4-b12d-4510-8c47-e3e7eef26994/injections/js/bug1772949-youtube-webshare-shim.js'
+1670855930388	geckodriver	INFO	Listening on 127.0.0.1:50997
+1670855933506	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50998" "-no-remote" "-profile" "C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofilemwzPWU"
+1670855934186	Marionette	INFO	Marionette enabled
+1670855934190	Marionette	INFO	Listening on port 51003
+WebDriver BiDi listening on ws://127.0.0.1:50998
+1670855934588	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofilemwzPWU\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50998/devtools/browser/264ada03-5aa5-4aef-8621-26f2541a90ab
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.google.com."
+1670856108068	Marionette	INFO	Stopped listening on port 51003
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1670858870207	geckodriver	INFO	Listening on 127.0.0.1:51577
+1670858873243	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51578" "-no-remote" "-profile" "C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofileTe6QF9"
+1670858874036	Marionette	INFO	Marionette enabled
+1670858874041	Marionette	INFO	Listening on port 51583
+WebDriver BiDi listening on ws://127.0.0.1:51578
+1670858874434	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\noorm\\AppData\\Local\\Temp\\rust_mozprofileTe6QF9\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51578/devtools/browser/6fc9eb0a-db61-446e-8430-42d7b69f62e5
+JavaScript error: resource://gre/modules/URIFixup.sys.mjs, line 304: NS_ERROR_FAILURE: Should pass a non-null uri

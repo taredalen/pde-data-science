@@ -9,3 +9,8 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+- rule: Search movie title
+  steps:
+    - intent: movie_plot
+    - action: action_movie_search

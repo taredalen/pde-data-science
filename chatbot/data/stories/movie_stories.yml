@@ -32,7 +32,7 @@ stories:
   - action: utter_plot
   - intent: movie_plot
     entities:
-      - slot: from_entity
+      - plot: from_entity
   - action: action_movie_search
 
 
