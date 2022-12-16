@@ -43,11 +43,19 @@ class ActionRecommendMovie(Action):
         overview = random_comedy.overview
         current_movie.set_description(overview)
 
-        dispatcher.utter_message(title, poster)
+        dispatcher.utter_message(poster, title)
 
 class ActionDescription(Action):
     def name(self) -> Text:
          return 'action_get_movie_description'
+
+    def run(self, dispatcher, tracker, domain):
+        description = current_movie.get_description()
+        dispatcher.utter_message(description)
+
+class ActionGenres(Action):
+    def name(self) -> Text:
+         return 'action_get_movie_genres'
 
     def run(self, dispatcher, tracker, domain):
         description = current_movie.get_description()

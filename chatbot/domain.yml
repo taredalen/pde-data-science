@@ -83,6 +83,18 @@ responses:
   - text: "Oh, you watched {film}, I like it quite a lot"
   - text: "{film} was so good, good for you"
 
+  utter_help:
+  - text: "Is there anything else I can help with?"
+  - text: "Something else?"
+
+  utter_wait_1:
+  - text: "Nice! What about this one"
+  - text: "Great! Look at this"
+
+  utter_wait_2:
+  - text: "Give me a second..."
+  - text: "I'm searching..."
+
 actions:
   - action_movie_search
   - utter_movie_watched_recently

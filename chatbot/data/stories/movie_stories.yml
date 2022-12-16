@@ -23,9 +23,14 @@ stories:
   - intent: mood_unhappy
   - action: utter_cheer_up
   - intent: affirm
+  - action: utter_wait_1
   - action: action_get_movie_recommendation
   - intent: movie_recommendation_description
+  - action: utter_wait_2
   - action: action_get_movie_description
+  - action: utter_help
+  - intent: deny
+  - action: utter_goodbye
 
 - story: happy path + no movie
   steps:

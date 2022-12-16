@@ -2,16 +2,9 @@ version: "3.1"
 
 nlu:
   - intent: movie_recommendation_description
-      examples: |
-        - Can I have description?
-        - Description
-        - Can i see the plot?
-        - Plot?
-
-  - intent: movie_recommendation_description
     examples: |
       - Can I have description?
-      - Description
+      - Description  
       - Can i see the plot?
       - Plot?
 
