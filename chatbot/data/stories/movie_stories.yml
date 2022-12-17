@@ -2,19 +2,31 @@ version: "3.1"
 
 stories:
 
+- story: recomment movie based on genre
+  steps:
+  - intent: movie_recommendation_genre_based
+  - action: utter_wait_1
+  - action: action_get_movie_recommendation_genre_based
+  - intent: movie_recommendation_description
+  - action: utter_wait_2
+  - action: action_get_movie_description
+  - action: utter_help_1
+
 - story: happy path + movie
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
-  - action: utter_happy
-  - action: utter_movie
+  - action: utter_help_2
+  - intent: movie_recommendation_genre_based
+  - action: utter_wait_1
+  - action: action_get_movie_recommendation_genre_based
+  - intent: movie_recommendation_description
+  - action: utter_wait_2
+  - action: action_get_movie_description
+  - action: utter_help_1
   - intent: deny
-  - action: utter_plot
-  - intent: movie_watched_recently
-    entities:
-      - film: from_entity
-  - action: utter_movie_watched_recently
+  - action: utter_goodbye
 
 - story: sad path + movie
   steps:
@@ -28,17 +40,7 @@ stories:
   - intent: movie_recommendation_description
   - action: utter_wait_2
   - action: action_get_movie_description
-  - action: utter_help
-  - intent: deny
-  - action: utter_goodbye
-
-- story: happy path + no movie
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-  - action: utter_movie
+  - action: utter_help_1
   - intent: deny
   - action: utter_goodbye
 

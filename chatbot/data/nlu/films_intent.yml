@@ -8,6 +8,33 @@ nlu:
       - Can i see the plot?
       - Plot?
 
+  - intent: movie_recommendation_genre_based
+    examples: |
+      - Action
+      - Adventure
+      - Animation
+      - Comedy 
+      - Crime 
+      - Documentary 
+      - Drama 
+      - Drama, comedy
+      - Family 
+      - Fantasy 
+      - History 
+      - Horror 
+      - Mystery 
+      - Romance
+      - Romance, comedy
+      - Science Fiction
+      - Thriller
+      - War
+      - Western
+      - I'd like to see some western and comedy movie
+      - I'm sad so I want to see something funny, so action movie
+      - I want recommendation for a horror movie
+      - I want to watch a western film
+      - Give me something from horror
+
   - regex: film
     examples: | 
       - \"'.*'.*\"
@@ -66,7 +93,6 @@ nlu:
       - ["Sunrise: A Song of Two Humans"](film)
       - ["The Lord of the Rings The Two Towers"](film)
       - ["The rule of the game"](film)
-      
 
   - lookup: film
     examples: |    

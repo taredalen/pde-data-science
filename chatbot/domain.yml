@@ -15,6 +15,7 @@ intents:
   - bot_challenge
   - movie_watched_recently
   - movie_recommendation_description
+  - movie_recommendation_genre_based
 
 entities:
   - film
@@ -37,6 +38,11 @@ slots:
     mappings:
       - type: from_text
         entity: movie_description
+  movie_recommendation_genre_based:
+    type: any
+    mappings:
+      - type: from_text
+        entity: movie_recommendation_genre_based
 
 
 responses:
@@ -83,9 +89,13 @@ responses:
   - text: "Oh, you watched {film}, I like it quite a lot"
   - text: "{film} was so good, good for you"
 
-  utter_help:
+  utter_help_1:
   - text: "Is there anything else I can help with?"
   - text: "Something else?"
+
+  utter_help_2:
+  - text: "Cool! How can I help you?"
+  - text: "Great! How can I help you?"
 
   utter_wait_1:
   - text: "Nice! What about this one"
@@ -100,3 +110,4 @@ actions:
   - utter_movie_watched_recently
   - action_get_movie_recommendation
   - action_get_movie_description
+  - action_get_movie_recommendation_genre_based
