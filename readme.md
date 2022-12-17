@@ -6,17 +6,7 @@
     ````yml
     rasa run actions
     ````
-3. For network connexion follow instructions from next link:
-   ````yml
-   https://ngrok.com/download
-   ````
-4. I'm using Telegram, so I added this to credentials.yml: 
-    ````yml
-   telegram:
-      access_token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-      verify: rasa_bot
-      webhook_url: https://52b1-37.eu.ngrok.io/webhooks/telegram/webhook
-    ````
+3. Open index file for bot widget
 
 5. For API configuration you need to generate token and add to .env file.
 
