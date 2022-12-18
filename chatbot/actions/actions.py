@@ -143,18 +143,20 @@ class ActionSimilar(Action):
 
         for similar in similar_movies:
             title = similar['title']
-            ratings = round(similar['vote_average'] / 10 * 5, 2)
+            score = round(similar['vote_average'] / 10 * 5, 2)
+            ratings = get_scores(score)
+
             if similar['poster_path'] is None:
                 poster = 'https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg'
             else:
                 poster = 'https://image.tmdb.org/t/p/original' + similar['poster_path']
 
-            item = {'image': poster, 'title': title, 'ratings':  get_scores(ratings)}
+            item = {'id': similar['id'], 'image': poster, 'title': title, 'ratings': ratings, 'score': score}
             recommendations.append(item)
 
         time.sleep(2)
 
-        data = {'payload': 'cardsCarousel', 'data': sorted(recommendations, key=itemgetter('ratings'), reverse=True)}
+        data = {'payload': 'cardsCarousel', 'data': sorted(recommendations, key=itemgetter('score'), reverse=True)}
         dispatcher.utter_message(json_message=data)
 
 
@@ -185,11 +187,26 @@ class ActionDirector(Action):
                 else:
                     poster = 'https://image.tmdb.org/t/p/original' + credit['poster_path']
 
-                item = {'image': poster, 'title': title, 'ratings': ratings}
+                item = {'id': credit['id'], 'image': poster, 'title': title, 'ratings': ratings, 'score': score}
                 director_movies.append(item)
 
         time.sleep(2)
-        data = {'payload': 'cardsCarousel', 'data': sorted(director_movies, key=itemgetter('ratings'), reverse=True)}
+        data = {'payload': 'cardsCarousel', 'data': sorted(director_movies, key=itemgetter('score'), reverse=True)}
         dispatcher.utter_message(json_message=data)
 
-        #return [SlotSet('director', director)]
+
+class ActionInformation(Action):
+    def name(self) -> Text:
+        return 'action_get_movie_information'
+
+    def run(self, dispatcher, tracker, domain):
+        selected = movie.details(tracker.get_slot('id'))
+        title = selected.title
+        overview = selected.overview
+        trailers = list(filter(lambda genre: genre['type'] == 'Trailer', selected.trailers['youtube']))
+        link = 'https://youtube.com/embed/' + trailers[0]['source']
+        response = "Title: {} \n\nOverview: {}\n".format(title, overview)
+        time.sleep(2)
+
+        msg = {"type": "video", "payload": {"title": "Link name", "src": link}}
+        dispatcher.utter_message(text=response, attachment=msg)

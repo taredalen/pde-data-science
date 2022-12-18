@@ -17,6 +17,7 @@ intents:
   - movie_recommendation_description
   - movie_recommendation_genre_based
   - movie_recommendation_director_based
+  - movie_id
 
 entities:
   - film
@@ -24,6 +25,7 @@ entities:
   - movie_description
   - movie_recommendation_genre_based
   - director
+  - id
 
 slots:
   film:
@@ -51,6 +53,11 @@ slots:
     mappings:
       - type: from_entity
         entity: director
+  id:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: id
 
 responses:
   utter_greet:
@@ -121,3 +128,4 @@ actions:
   - action_get_movie_recommendation_genre_based
   - action_get_movie_recommendation_title_based
   - action_get_movie_recommendation_director_based
+  - action_get_movie_information

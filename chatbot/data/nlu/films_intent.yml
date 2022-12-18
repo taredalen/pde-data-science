@@ -1,6 +1,37 @@
 version: "3.1"
 
 nlu:
+  - intent: movie_id
+    examples: |
+      - [1223](id)
+      - [218](id)       
+      - [1223](id)
+      - [982](id)
+      - [6098765](id)
+      - [21](id)
+      - [12](id)
+      - [3](id)
+      - [5](id)
+      - [486](id)     
+      - [12](id)
+      - [555](id)
+      - [44](id)      
+      - [33](id)
+      - [22245](id)
+      - [34](id)
+
+  - intent: movie_information
+    examples: |
+      - Can I have description of ["The Silence of the Lambs"](film)?
+      - Can you give me information about ["Black Panther"](film)?
+      - Give me more information about ["The Silence of the Lambs"](film)?
+      - Give me information about ["Zombieland"](film)?
+      - Can i see the information about ["The Hidden Fortress"](film)?
+      - Give me information about ["Throne of Blood"](film)?
+      - Give me information about ["The Bad Sleep Well"](film)?
+      - Give me information about ["The Bridge on the River Kwai"](film)?
+      - Give me information about ["The Lower Depths"](film)? 
+
   - intent: movie_recommendation_description
     examples: |
       - Can I have description?
@@ -13,6 +44,9 @@ nlu:
       - I'd like to see some wovie directed by [Akira Kurosawa](director)
       - I want recommendation from [Akira Kurosawa](director)
       - I want to watch a film directed by [Steven Spielberg](director)
+      - Can you give me movies directed by [Kurosawa](director)? 
+      - Can you give me movies directed by [Scorsese](director)? 
+      - Can you give me movies directed by [Dolan](director)? 
       - Show me films directed by [Martin Scorsese](director)
       - Show me films directed by [James Cameron](director)
       - Show me films directed by [Michael Mann](director)
@@ -95,6 +129,9 @@ nlu:
   - regex: film
     examples: | 
       - \"'.*'.*\"
+  - regex: id
+    examples: |
+      - [0-9]+
 
   - intent: movie_watched_recently
     examples: |

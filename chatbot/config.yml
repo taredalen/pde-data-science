@@ -20,7 +20,7 @@ pipeline:
   - name: CRFEntityExtractor
   - name: EntitySynonymMapper
   - name: SpacyEntityExtractor
-    dimensions: [ "PERSON" ]
+    dimensions: [ "director" ]
 
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
 # # If you'd like to customize it, uncomment and adjust the pipeline.

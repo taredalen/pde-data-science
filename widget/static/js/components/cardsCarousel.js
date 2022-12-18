@@ -7,12 +7,16 @@ function createCardsCarousel(cardsData) {
     cardsData.map((card_item) => {
         const item = `<div class="carousel_cards in-left">
     <img class="cardBackgroundImage" src=${card_item.image}>
-    <div class="cardFooter"> <span class="cardTitle" title="abc">${card_item.title}</span>
+    <div onClick="reply_click(this.id)" id=${card_item.id} class="cardFooter"> <span class="cardTitle" title="abc">${card_item.title}</span>
     <div class="cardDescription">${card_item.ratings}</div></div></div>`;
         cards += item;
     });
     const cardContents = `<div id="paginated_cards" class="cards"> <div class="cards_scroller">${cards} <span class="arrow prev fa fa-chevron-circle-left "></span> <span class="arrow next fa fa-chevron-circle-right" ></span> </div> </div>`;
     return cardContents;
+}
+
+function reply_click(clicked_id) {
+    navigator.clipboard.writeText(clicked_id);
 }
 
 /**
