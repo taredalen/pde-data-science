@@ -5,6 +5,7 @@ from itertools import chain
 from operator import itemgetter
 
 from dotenv import load_dotenv
+from rasa_sdk.events import SlotSet
 
 from tmdbv3api import TMDb, Movie, Discover, Search, Person
 
@@ -142,3 +143,39 @@ class ActionSimilar(Action):
 
         data = {'payload': 'cardsCarousel', 'data': sorted(recommendations, key=itemgetter('ratings'), reverse=True)}
         dispatcher.utter_message(json_message=data)
+
+
+class ActionDirector(Action):
+    def name(self) -> Text:
+        return 'action_get_movie_recommendation_director_based'
+
+    def run(self, dispatcher, tracker, domain):
+        director_movies = []
+        print('------------------------------')
+        print(tracker.get_slot('director'))
+        print('------------------------------')
+        director = search.people('query=' + tracker.get_slot('director'))
+        director_credits = person.combined_credits(director[0]['id'])
+
+        for credit in director_credits['crew']:
+            if credit['job'] == 'Director':
+                ratings = (round(credit['vote_average'] / 10 * 5, 2))
+
+                if 'title' in credit:
+                    title = credit['title']
+                else:
+                    title = credit['name']
+
+                if credit['poster_path'] is None:
+                    poster = 'https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg'
+                else:
+                    poster = 'https://image.tmdb.org/t/p/original' + credit['poster_path']
+
+                item = {'image': poster, 'title': title, 'ratings': ratings}
+                director_movies.append(item)
+
+        time.sleep(2)
+        data = {'payload': 'cardsCarousel', 'data': sorted(director_movies, key=itemgetter('ratings'), reverse=True)}
+        dispatcher.utter_message(json_message=data)
+
+        #return [SlotSet('director', director)]

@@ -2,6 +2,13 @@ version: "3.1"
 
 stories:
 
+- story: recomment movie based on director
+  steps:
+  - intent: movie_recommendation_director_based
+    entities:
+      - film: from_entity
+  - action: action_get_movie_recommendation_director_based
+
 - story: recomment movie based on title
   steps:
   - intent: movie_watched_recently

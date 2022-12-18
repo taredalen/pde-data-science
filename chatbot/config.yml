@@ -19,6 +19,8 @@ pipeline:
     epochs: 200
   - name: CRFEntityExtractor
   - name: EntitySynonymMapper
+  - name: SpacyEntityExtractor
+    dimensions: [ "PERSON" ]
 
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
 # # If you'd like to customize it, uncomment and adjust the pipeline.
