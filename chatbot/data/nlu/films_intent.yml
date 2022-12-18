@@ -79,9 +79,13 @@ nlu:
     examples: |
       - It was about [a dog and a little girl](plot)
       - It was about [a man and his family going to a isolated hotel and going mad and trying to kill them](plot)
-      - It was about [a serial killer named Jack that has OCD and it shows how his mental illness impacts his killings.](plot)
+      - It was about [a serial killer named Jack that has OCD and it shows how his mental illness impacts his killings](plot)
+      - It was about [a serial killer named Jack with OCD](plot)
       - I don't remember everything but there was [a group of teenagers hunting for monsters and ghosts. They had a van that was green and blue](plot)
-      - It told the story of [a young couple going to a festival in Sweden with some friends and it turning out to be a cult] (plot)
+      - It was about [a young couple going to a festival in Sweden with some friends and it turning out to be a cult] (plot)
+      - It was about [a cult in Sweden](plot)
+      - It was about [halloween and christmas](plot)
+      - It was about [a poor family scamming a rich family](plot)
       - I think it was about [](plot)
 
   - lookup: plot
@@ -89,3 +93,5 @@ nlu:
       - a dog and a little girl
       - a man and his family going to a recluse house and going mad and trying to kill them
       - a young couple going to a festival in Sweden with some friends and it turning out to be a cult
+      - a serial killer named Jack that has OCD and it shows how his mental illness impacts his killings
+      - a group of teenagers hunting for monsters and ghosts. They had a van that was green and blue
