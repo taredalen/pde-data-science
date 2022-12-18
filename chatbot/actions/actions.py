@@ -72,6 +72,20 @@ def get_movie_by_genres(genre):
 
     return poster, title
 
+def get_scores(score):
+    rating = ''
+    if score > 4.5:
+        rating = '⭐️⭐️⭐️⭐️⭐️'
+    if (score < 4.5) and (score >= 3.5):
+        rating = '⭐️⭐️⭐️⭐️'
+    if (score < 3.5) and (score >= 2.5):
+        rating = '⭐️⭐️⭐️'
+    if (score < 2.5) and (score >= 1.5):
+        rating = '⭐️⭐️️'
+    if score < 1.5:
+        rating = '⭐️'
+    return rating
+
 current_movie = Movie('description', 'title')
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -129,14 +143,13 @@ class ActionSimilar(Action):
 
         for similar in similar_movies:
             title = similar['title']
-            ratings = (round(similar['vote_average'] / 10 * 5, 2))
-
+            ratings = round(similar['vote_average'] / 10 * 5, 2)
             if similar['poster_path'] is None:
                 poster = 'https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a7614185931650f8cee23fa137b93812ccb132b9df511df1cfac.svg'
             else:
                 poster = 'https://image.tmdb.org/t/p/original' + similar['poster_path']
 
-            item = {'image': poster, 'title': title, 'ratings': ratings}
+            item = {'image': poster, 'title': title, 'ratings':  get_scores(ratings)}
             recommendations.append(item)
 
         time.sleep(2)
@@ -159,7 +172,8 @@ class ActionDirector(Action):
 
         for credit in director_credits['crew']:
             if credit['job'] == 'Director':
-                ratings = (round(credit['vote_average'] / 10 * 5, 2))
+                score = round(credit['vote_average'] / 10 * 5, 2)
+                ratings = get_scores(score)
 
                 if 'title' in credit:
                     title = credit['title']

@@ -8,7 +8,7 @@ function createCardsCarousel(cardsData) {
         const item = `<div class="carousel_cards in-left">
     <img class="cardBackgroundImage" src=${card_item.image}>
     <div class="cardFooter"> <span class="cardTitle" title="abc">${card_item.title}</span>
-    <div class="cardDescription"></div></div></div>`;
+    <div class="cardDescription">${card_item.ratings}</div></div></div>`;
         cards += item;
     });
     const cardContents = `<div id="paginated_cards" class="cards"> <div class="cards_scroller">${cards} <span class="arrow prev fa fa-chevron-circle-left "></span> <span class="arrow next fa fa-chevron-circle-right" ></span> </div> </div>`;
