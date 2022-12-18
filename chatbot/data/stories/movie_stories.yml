@@ -2,15 +2,29 @@ version: "3.1"
 
 stories:
 
+- story: recomment movie based on title
+  steps:
+  - intent: movie_watched_recently
+    entities:
+      - film: from_entity
+  - action: action_get_movie_recommendation_title_based
+
 - story: recomment movie based on genre
   steps:
   - intent: movie_recommendation_genre_based
   - action: utter_wait_1
   - action: action_get_movie_recommendation_genre_based
   - intent: movie_recommendation_description
-  - action: utter_wait_2
   - action: action_get_movie_description
   - action: utter_help_1
+
+- story: get movie description
+  steps:
+  - intent: movie_recommendation_description
+  - action: action_get_movie_description
+  - action: utter_help_1
+  - intent: deny
+  - action: utter_goodbye
 
 - story: happy path + movie
   steps:
@@ -22,7 +36,6 @@ stories:
   - action: utter_wait_1
   - action: action_get_movie_recommendation_genre_based
   - intent: movie_recommendation_description
-  - action: utter_wait_2
   - action: action_get_movie_description
   - action: utter_help_1
   - intent: deny
@@ -38,7 +51,6 @@ stories:
   - action: utter_wait_1
   - action: action_get_movie_recommendation
   - intent: movie_recommendation_description
-  - action: utter_wait_2
   - action: action_get_movie_description
   - action: utter_help_1
   - intent: deny

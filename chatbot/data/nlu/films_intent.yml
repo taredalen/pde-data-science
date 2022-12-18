@@ -41,13 +41,15 @@ nlu:
 
   - intent: movie_watched_recently
     examples: |
-      - I watched ["Rashomon"](film)
+      - I want to see something like ["Dr. Strangelove"](film)
+      - Give me similar movies to ["Gone with the Wind"](film)
+      - I watched ["Rashomon"](film), so I'd like to have some recommendation
       - I watched ["Dr. Strangelove"](film)
       - I watched ["Singin' in the Rain"](film)
       - I watched ["Gone with the Wind"](film)
       - I watched [E.T. the Extra-Terrestrial](film)
       - I watched [One Flew Over the Cuckoo's Nest](film)
-      - I watched [No Country for Old Men](film)
+      - Similar to [No Country for Old Men](film)
       - I watched [The Lord of the Rings The Two Towers](film)
       - I watched [The Good, the Bad and the Ugly](film)
       - I watched [The Silence of the Lambs](film)

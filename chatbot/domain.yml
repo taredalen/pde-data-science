@@ -21,6 +21,7 @@ entities:
   - film
   - movie_recommendation
   - movie_description
+  - movie_recommendation_genre_based
 
 slots:
   film:
@@ -44,7 +45,6 @@ slots:
       - type: from_text
         entity: movie_recommendation_genre_based
 
-
 responses:
   utter_greet:
   - text: "Hey! How are you?"
@@ -67,7 +67,8 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Bye 👋"
+  - text: "See you soon 👋"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
@@ -111,3 +112,4 @@ actions:
   - action_get_movie_recommendation
   - action_get_movie_description
   - action_get_movie_recommendation_genre_based
+  - action_get_movie_recommendation_title_based
