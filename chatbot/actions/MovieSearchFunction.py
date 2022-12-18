@@ -1,13 +1,14 @@
-from selenium import webdriver
+"""from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from movie_title_fct import *
+
 
 def MovieTitleSearch(plot):
-
     firefox_profile = webdriver.FirefoxProfile()
     driver = webdriver.Firefox(firefox_profile=firefox_profile)
     driver.maximize_window()
@@ -26,5 +27,4 @@ def MovieTitleSearch(plot):
     if wiki in movie:
         movie.replace(wiki,'')
     print(movie)
-    return movie
-
+    return movie"""

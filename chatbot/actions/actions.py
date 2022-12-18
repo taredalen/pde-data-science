@@ -2,15 +2,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import logging
-import os
-from tmdbv3api import TMDb, Movie, Discover
-tmdb = TMDb()
-movie = Movie()
-discover = Discover()
-import movie_title_fct
-tmdb.api_key = os.getenv('TMDB_API_KEY')
-
-# in any function
+from movie_title_fct import MoviePlotCSV
 
 class MovieSearch(Action):
     def name(self) -> Text:
@@ -28,9 +20,10 @@ class MovieSearch(Action):
         # custom behavior
         msg = f"Plot {current_plot} received, commencing search"
         dispatcher.utter_message(text=msg)
-        movie_guess=MovieTitleSearch(current_plot)
-        msg = f"Is it {movie_guess} ?"
-        dispatcher.utter_message(text=msg)
+        movie_guess=MoviePlotCSV(current_plot)
+        dispatcher.utter_message(text=movie_guess.head.style.hide_index())
+
         return []
+        
 
 
