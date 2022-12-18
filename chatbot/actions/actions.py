@@ -63,6 +63,8 @@ class ActionGetCinemaNear(Action):
             return [SlotSet("country", None), SlotSet("city", None), SlotSet("address", None), SlotSet("confirm_address", None)]
             
         df = pd.read_csv(os.getcwd() + "/csv/data.csv", delimiter=";")
+        dispatcher.utter_message("I am looking for the nearest cinema to your location, this can take a bit of time, please be patient")
+        cinema_near = []
 
         for i in range(df.shape[0]):
             try: 
@@ -72,6 +74,25 @@ class ActionGetCinemaNear(Action):
             
             if dist <= 5:
                 cinema = geolocator.reverse(f"{df.loc[i, 'Y']}, {df.loc[i, 'X']}")
-                dispatcher.utter_message(f"this cinema is near: {cinema} \nWebsite: {df.loc[i, 'website']}\n")
+                cinema_near.append((dist, cinema, df.loc[i, 'website']))
 
-        return []
+
+        cinema_near.sort(key= lambda x: x[0])
+
+        nearest = cinema_near[:8]
+
+        if len(nearest) == 0:
+            dispatcher.utter_message("I am sorry, there are no cinema near you")
+            return [SlotSet("country", None), SlotSet("city", None), SlotSet("address", None), SlotSet("confirm_address", None)]
+
+        data = []
+
+        for cinema in nearest:
+            #dispatcher.utter_message(f"This cinema is near:\n{cinema[1]}\n{cinema[2]}")
+            data.append({"title": cinema[1].raw["display_name"].split(',')[0], "description":cinema[1].raw["display_name"]})
+
+        message = {"payload": "collapsible", "data": data}
+
+        dispatcher.utter_message(text="Here are the cinemas, from nearest to farthest:\n",json_message=message)
+
+        return [SlotSet("country", None), SlotSet("city", None), SlotSet("address", None), SlotSet("confirm_address", None)]
