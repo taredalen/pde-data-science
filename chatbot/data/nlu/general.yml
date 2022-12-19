@@ -8,6 +8,73 @@ nlu:
       - no, thank you
       - not now
       - I don't wanna
+      - how about no
+      - don t have a sense
+      - no
+      - don't
+      - I don't want that
+      - I disagree
+      - disagree
+      - I don't want
+      - not interested
+      - I don't think so
+      - no way
+      - no it isn't
+      - no I don't
+      - I'm not
+      - na
+      - no that's fine thank you
+      - never
+      - I said no
+      - of course not
+      - nah
+      - no tanks
+      - no never
+      - no need
+      - no thanks
+      - no sorry
+      - do not
+      - not today
+      - no it's not
+      - absolutely not
+      - not that
+      - nooo
+      - nope
+      - I don't want to
+      - no I would not
+      - let 's not
+      - not needed
+      - not this time
+      - no don't do that
+      - thanks but no thanks
+      - no that's wrong
+      - not this
+      - definitely not
+      - not at this time
+      - not exactly
+      - no don't
+      - not really no
+      - no thank you not right now
+      - actually no
+      - no leave it
+      - sorry no
+      - no incorrect
+      - nope sorry
+      - I say no
+      - not really
+      - not right now thanks
+      - I think no
+      - absolutely no
+      - no actually
+      - apparently not
+      - no do not
+      - no just no
+      - no but thank you
+      - no need thanks
+      - no thank you though
+      - no thank you very much
+      - no thanks not right now
+      - no forget
 
   - intent: affirm
     examples: |
