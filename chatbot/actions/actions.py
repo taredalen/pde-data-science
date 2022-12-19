@@ -18,11 +18,12 @@ class MovieSearch(Action):
             dispatcher.utter_message(text=msg)
             return []
         # custom behavior
-        msg = f"Plot {current_plot} received, commencing search"
+        msg = f"Plot received, commencing search through our databse"
         dispatcher.utter_message(text=msg)
         movie_guess=MoviePlotCSV(current_plot)
-        dispatcher.utter_message(text=movie_guess.head.style.hide_index())
-
+        dispatcher.utter_message(text=movie_guess)
+        msg="Are any of those movies the one you were looking for ?"
+        dispatcher.utter_message(text=msg)
         return []
         
 

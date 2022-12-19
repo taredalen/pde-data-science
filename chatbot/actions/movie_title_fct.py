@@ -5,7 +5,7 @@ import nltk
 from nltk.corpus import wordnet
 from nltk.corpus import stopwords
 from nltk.metrics import ConfusionMatrix
-
+from tabulate import tabulate
 
 from nltk import word_tokenize, WordNetLemmatizer, PorterStemmer
 from nltk import NaiveBayesClassifier, classify
@@ -48,7 +48,10 @@ stop_punctuation = [':', '(', ')', '/', '|', ',',
 
 def get_features_print(plot):
     return [ word for word in preprocess(plot) if word not in stoplist and word not in stop_punctuation]
-
+def dataframeDisplay(dataframe):
+    df=dataframe.loc[0:10]
+    df_string=df.to_string(index=False)
+    return df_string
 def MoviePlotCSV(plot):
     pro_plot=get_features_print(plot)
     print(pro_plot)
@@ -61,6 +64,9 @@ def MoviePlotCSV(plot):
         percent=100*(len(wordset)/len(set(pro_plot)))
         df_res['Accuracy'].loc[i]=percent
         df_res['Keywords found'].loc[i]=wordset
-    df_res.sort_values(by='Accuracy', ascending=False,inplace=True)
-    return df_res
+    df_res.sort_values(by='Accuracy', ascending=False,inplace=True,ignore_index=True)
+    return tabulate(df_res[0:10], headers='keys', tablefmt='psql',showindex=False)
+    
+
+
 

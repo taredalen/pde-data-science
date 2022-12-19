@@ -91,6 +91,7 @@ nlu:
   - lookup: plot
     examples: |    
       - a dog and a little girl
+      - a man getting bit by a spider and having super powers, shooting webs and fighting evil
       - a man and his family going to a recluse house and going mad and trying to kill them
       - a young couple going to a festival in Sweden with some friends and it turning out to be a cult
       - a serial killer named Jack that has OCD and it shows how his mental illness impacts his killings

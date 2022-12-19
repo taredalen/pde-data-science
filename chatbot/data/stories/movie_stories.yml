@@ -17,9 +17,10 @@ stories:
     entities:
       - film: from_entity
   - action: utter_movie_watched_recently
+  
 
 
-- story: happy path + movie title
+- story: happy path + plot + movie title correct
   steps:
   - intent: greet
   - action: utter_greet
@@ -34,6 +35,12 @@ stories:
     entities:
       - plot: from_entity
   - action: action_movie_search
+  - intent: affirm
+  - action: utter_title_question
+  - intent: movie_watched_recently
+    entities:
+      - film: from_entity
+  - action: utter_movie_watched_recently
 
 
 - story: happy path + no movie
