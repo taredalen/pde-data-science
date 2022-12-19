@@ -1,6 +1,7 @@
 import os
 import time
 import random
+import pandas as pd
 from itertools import chain
 from operator import itemgetter
 
@@ -10,16 +11,11 @@ from tmdbv3api import TMDb, Movie, Discover, Search, Person
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
-from rasa_sdk.executor import CollectingDispatcher
-
-
-from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet
 from rasa_sdk.executor import CollectingDispatcher
 
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
-import pandas as pd
 
 load_dotenv()
 

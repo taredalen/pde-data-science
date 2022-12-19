@@ -196,7 +196,7 @@ nlu:
       - Leave No Trace
       - Joker
 
-- intent: ask_for_cinema_nearby
-  examples: |
-    - I want to know what are the cinema nearby
-    - What cinemas are there nearby
+  - intent: ask_for_cinema_nearby
+    examples: |
+      - I want to know what are the cinema nearby
+      - What cinemas are there nearby

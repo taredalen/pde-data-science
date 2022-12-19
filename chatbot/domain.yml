@@ -1,4 +1,5 @@
 version: '3.1'
+
 intents:
 - greet
 - goodbye
@@ -14,8 +15,6 @@ intents:
 - movie_id
 - affirm
 - ask_for_cinema_nearby
-- deny
-- movie_watched_recently
 - nlu_fallback
 - smalltalk_agent_acquaintance
 - smalltalk_agent_age
@@ -101,6 +100,8 @@ intents:
 - smalltalk_user_wants_to_see_agent_again
 - smalltalk_user_wants_to_talk
 - smalltalk_user_will_be_back
+
+
 actions:
 - action_movie_search
 - utter_movie_watched_recently
@@ -283,6 +284,7 @@ slots:
       conditions:
       - active_loop: get_adress_form
         requested_slot: confirm_address
+
 forms:
   get_adress_form:
     required_slots:
@@ -290,9 +292,10 @@ forms:
     - city
     - address
     - confirm_address
-responses:
 
- utter_greet:
+
+responses:
+  utter_greet:
   - text: "Hey! How are you?"
   - text: "Heeey! How it's going?"
 
@@ -595,7 +598,7 @@ responses:
   - text: Just here, waiting to help someone. What can I do for you?
   utter_smalltalk_user_angry:
   - text: I'm sorry. A quick walk may make you feel better.
-  - text: 'Take a deep breath. '
+  - text: Take a deep breath.
   utter_smalltalk_user_back:
   - text: Long time no see. What's up?
   - text: Just in time. How can I help?
@@ -606,7 +609,6 @@ responses:
   - text: Boredom, huh? Check out a video of a hedgehog taking a bath!
   - text: What to do against boredom? Watch baby animal videos.
   - text: Bored? How about 10 jumping jacks? Get your blood flowing.
-  - text: 'Bored? Silly idea, but it works: Interview you feet. '
   - text: If you're bored, you could plan your dream vacation.
   utter_smalltalk_user_busy:
   - text: Okay. I'll let you get back to work.
@@ -713,13 +715,11 @@ responses:
   - text: I'll be waiting.
   - text: Okay. You know where to find me.
   - text: All right. I'll be here.
-  utter_movie_watched_recently:
-  - text: Oh, you watched {film}, I like it quite a lot
-  - text: '{film} was so good, good for you'
   utter_did_watch_movie_recently:
   - text: Did you watch any film recently ?
   utter_what_was_the_film_watched_recently:
   - text: What was it ?
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

@@ -1144,6 +1144,7 @@ nlu:
     - it's bed time
     - going to bed now
 
+
 - intent: smalltalk_user_good
   examples: |
     - I am good
@@ -1152,12 +1153,12 @@ nlu:
     - I'm good
     - I'm doing good
     - I'm great thanks
+    - I am happy
+    - happy
 
 - intent: smalltalk_user_happy
   examples: |
-    - I am happy
     - I'm happy to see you
-    - happy
     - if you're happy then I'm happy
     - I'm happy for you
     - I'm happy to help
