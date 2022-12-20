@@ -42,15 +42,15 @@ nlu:
   - intent: movie_recommendation_director_based
     examples: |
       - I'd like to see some wovie directed by [Akira Kurosawa](director)
-      - I want recommendation from [Akira Kurosawa](director)
+      - I want to see something from [Akira Kurosawa](director)
       - I want to watch a film directed by [Steven Spielberg](director)
       - Can you give me movies directed by [Kurosawa](director)? 
       - Can you give me movies directed by [Scorsese](director)? 
       - Can you give me movies directed by [Dolan](director)? 
-      - Show me films directed by [Martin Scorsese](director)
-      - Show me films directed by [James Cameron](director)
-      - Show me films directed by [Michael Mann](director)
-      - Show me films directed by [Jane Campion](director)
+      - I want to see something from [Martin Scorsese](director)
+      - I want to see something from [James Cameron](director)
+      - I want to see something from [Michael Mann](director)
+      - I want to see something from [Jane Campion](director)
       - Show me films directed by [Ridley Scott](director)
       - Show me films directed by [George Lucas](director)
       - Show me films directed by [Mel Brooks](director)
@@ -82,24 +82,186 @@ nlu:
       - Show me movies of [Tim Burton](director)
       - Show me movies of [Truffaut](director)
       - Show me movies of [Eisenstein](director)
-      - I want recommendation for film directed by [Yasujiro Ozu](director)
-      - I want recommendation for film directed by [Kieslowski](director)
-      - I want recommendation for film directed by [Bong Joon Ho](director)
-      - I want recommendation for film directed by [Guillermo del Toro](director)
-      - I want recommendation for film directed by [Wes Anderson](director)
-      - I want recommendation for film directed by [Terrence Malick](director)
-      - I want recommendation for film directed by [The Coen Brothers](director)
-      - I want recommendation for film directed by [Andrei Tarkovsky](director)
-      - I want recommendation for film directed by [Kubrick](director)
-      - I want recommendation for film directed by [Truffaut](director)
-      - I want recommendation for film directed by [Fellini](director)
-      - I want recommendation for film directed by [Antonioni](director)
-      - I want recommendation for film directed by [Bresson](director)
-      - I want recommendation for film directed by [Marcel Pagnol](director)
-      - I want recommendation for film directed by [Clouzot](director)
-      - I want recommendation for film directed by [Melville](director)
+      - Show me movies of [Yasujiro Ozu](director)
+      - Show me movies of [Kieslowski](director)
+      - Show me movies of [Bong Joon Ho](director)
+      - Show me movies of [Guillermo del Toro](director)
+      - Show me movies of [Wes Anderson](director)
+      - Show me movies of [Terrence Malick](director)
+      - Show me movies of [The Coen Brothers](director)
+      - what movies were directed by [Andrei Tarkovsky](director)
+      - what movies were directed by [Kubrick](director)
+      - what movies were directed by [Truffaut](director)
+      - what movies were directed by [Fellini](director)
+      - what movies were directed by [Antonioni](director)
+      - what movies were directed by [Bresson](director)
+      - what movies were directed by [Marcel Pagnol](director)
+      - what movies were directed by [Clouzot](director)
+      - what movies were directed by [Melville](director)
+
+  - lookup: director
+    examples: |
+      - steven spielberg
+      - christopher nolan
+      - quentin tarantino
+      - scott rudin
+      - charles roven
+      - peter jackson
+      - ridley scott
+      - martin scorsese
+      - joel silver
+      - tim bevan
+      - lawrence bender
+      - david fincher
+      - david heyman
+      - emma thomas
+      - brian grazer
+      - eric fellner
+      - robert zemeckis
+      - arnon milchan
+      - neal h. moritz
+      - michael bay
+      - tim burton
+      - rick mccallum
+      - barrie m. osborne
+      - jason blum
+      - james cameron
+      - ian bryce
+      - frank marshall
+      - walter f. parkes
+      - francis ford coppola
+      - ethan coen
+      - chris columbus
+      - ron howard
+      - joel coen
+      - bryan singer
+      - lauren shuler donner
+      - steve golin
+      - mark gordon
+      - stanley kubrick
+      - lorenzo di bonaventura
+      - judd apatow
+      - matthew vaughn
+      - steve starkey
+      - jon kilik
+      - art linson
+      - frank darabont
+      - sam raimi
+      - zack snyder
+      - stacey sher
+      - gore verbinski
+      - peter chernin
+      - george lucas
+      - lana wachowski
+      - simon kinberg
+      - guy ritchie
+      - lilly wachowski
+      - alfred hitchcock
+      - patrick crowley
+      - danny boyle
+      - m. night shyamalan
+      - robert rodriguez
+      - steven soderbergh
+      -  steve tisch
+      - andrew macdonald
+      - todd phillips
+      - mark johnson
+      - bruce davey
+      - mike medavoy
+      - jack giarraputo
+      - david yates
+      - tom rosenberg
+      - denise di novi
+      - anthony russo
+      - joe russo
+      - james wan
+      - michael mann
+      - sam mendes
+      - john lasseter
+      - shawn levy
+      - alfonso cuarón
+      - larry franco
+      - daniel goldberg
+      - darren aronofsky
+      - andrew stanton
+      - carolynne cunningham
+      - roland emmerich
+      - irwin winkler
+      - bruce cohen
+      - luc besson
+      - guillermo del toro
+      - todd black
+      - branko lustig
+      - francis lawrence
+      - jon favreau
+      - tony scott
+      - scott stuber
+      - barbara broccoli
+      - brett ratner
+      - jon landau
+      - gary kurtz
+      - brad bird
+      - joss whedon
+      - paula wagner
+      - james mangold
+      - pete docter
+      - brian de palma
+      - niki marvin
+      - adam mckay
+      - wes anderson
+      - denis villeneuve
+      - doug liman
+      - elizabeth avellan
+      - chris bender
+      - edgar wright
+      - antoine fuqua
+      - edward zwick
+      - hayao miyazaki
+      - john mctiernan
+      - jay roach
+      - robert lorenz
+      - ivan reitman
+      - michael shamberg
+      - alejandro g. iñárritu
+      - oliver stone
+      - clint eastwood
+      - shauna robertson
+      - christian colson
+      - barry sonnenfeld
+      - anthony bregman
+      - louis leterrier
+      - joel schumacher
+      - jonathan demme
+      - peter berg
+      - paul greengrass
+      - richard donner
+      - stuart cornfeld
+      - roman polanski
+      - peter farrelly
+      - rob reiner
+      - peter weir
+      - jeremy bolt
+      - david o. russell
+      - dan jinks
+      - mary parent
+      - joe johnston
+      - ross grayson bell
+      - tom desanto
+      - marc forster
+      - edward saxon
+      - woody allen
+      - richard linklater
 
   - intent: movie_recommendation_genre_based
+    examples: |
+      - tell me [comedy](genre) movie
+      - tell me [action](genre) movie
+      - tell me [horror](genre) movie
+      - give me [comedy](genre) movie
+      - give me [action](genre) movie
+      - give me [horror](genre) movie
+
+  - lookup: genre
     examples: |
       - Action
       - Adventure
@@ -120,11 +282,6 @@ nlu:
       - Thriller
       - War
       - Western
-      - I'd like to see some western and comedy movie
-      - I'm sad so I want to see something funny, so action movie
-      - I want recommendation for a horror movie
-      - I want to watch a western film
-      - Give me something from horror
 
   - regex: film
     examples: | 
@@ -146,8 +303,8 @@ nlu:
       - Similar to [No Country for Old Men](film)
       - I watched [The Lord of the Rings The Two Towers](film)
       - I watched [The Good, the Bad and the Ugly](film)
-      - I watched [The Silence of the Lambs](film)
-      - I watched [The Godfather 2](film)
+      - I watched ["The Silence of the Lambs"](film)
+      - I watched ["The Godfather 2"](film)
       - I watched [The Godfather Part II](film)
       - I watched [No Country for Old Men](film)
       - I watched [Paddington 2](film) 
@@ -189,12 +346,6 @@ nlu:
       - ["Sunrise: A Song of Two Humans"](film)
       - ["The Lord of the Rings The Two Towers"](film)
       - ["The rule of the game"](film)
-
-  - lookup: film
-    examples: |    
-      - Filmworker
-      - Leave No Trace
-      - Joker
 
   - intent: ask_for_cinema_nearby
     examples: |

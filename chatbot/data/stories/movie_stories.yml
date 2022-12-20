@@ -13,7 +13,7 @@ stories:
   steps:
   - intent: movie_recommendation_director_based
     entities:
-      - film: from_entity
+      - director: from_entity
   - action: action_get_movie_recommendation_director_based
 
 - story: recommend movie based on title
@@ -26,6 +26,8 @@ stories:
 - story: recommend movie based on genre
   steps:
   - intent: movie_recommendation_genre_based
+    entities:
+      - genre: from_entity
   - action: utter_wait_1
   - action: action_get_movie_recommendation_genre_based
   - intent: movie_recommendation_description
@@ -156,3 +158,4 @@ stories:
   - action: action_get_cinema_near
   - intent: smalltalk_appraisal_thank_you
   - action: utter_smalltalk_appraisal_well_done
+

@@ -9,3 +9,5 @@ api.py
 .idea
 /chatbot/out.log
 /widget/
+.rasa
+/actions/__pycache__
