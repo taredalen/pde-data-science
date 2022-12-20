@@ -65,6 +65,9 @@ responses:
   utter_plot:
   - text: "Okay! Write the plot of the movie title you are looking for."
 
+  utter_plot_again:
+  - text: "Let's try again. Maybe be more specific with your plot."
+
   utter_title:
     - text: "Do you remember the title of it ?"
 

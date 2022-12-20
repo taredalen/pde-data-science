@@ -14,3 +14,10 @@ rules:
   steps:
     - intent: movie_plot
     - action: action_movie_search
+
+- rule: Re start movie title search
+  steps:
+  - action: action_movie_search
+  - intent: deny
+  - action: utter_plot_again
+  - action: utter_plot

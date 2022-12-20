@@ -43,6 +43,7 @@ stories:
   - action: utter_movie_watched_recently
 
 
+
 - story: happy path + no movie
   steps:
   - intent: greet
