@@ -1,7 +1,0 @@
-{
-  "rule_only_slots": [],
-  "rule_only_loops": [
-    "get_adress_form",
-    "get_address_form"
-  ]
-}
