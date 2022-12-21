@@ -10,4 +10,6 @@ api.py
 /chatbot/out.log
 /widget/
 .rasa
+.keras
+.config
 /actions/__pycache__

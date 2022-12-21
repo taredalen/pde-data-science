@@ -25,7 +25,8 @@ discover = Discover()
 search = Search()
 person = Person()
 
-tmdb.api_key = os.getenv('TMDB_API')
+#tmdb.api_key = os.getenv('TMDB_API')
+tmdb.api_key = 'ae5c6e2f19874fb82212caa950a736f4'
 
 genres_list = [
     {'id': 28, 'name': 'Action'},
