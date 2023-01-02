@@ -1,0 +1,394 @@
+version: "3.1"
+
+nlu:
+  - intent: movie_id
+    examples: |
+      - [1223](id)
+      - [218](id)       
+      - [1223](id)
+      - [982](id)
+      - [6098765](id)
+      - [21](id)
+      - [12](id)
+      - [3](id)
+      - [5](id)
+      - [486](id)     
+      - [12](id)
+      - [555](id)
+      - [44](id)      
+      - [33](id)
+      - [22245](id)
+      - [34](id)
+
+  - intent: movie_information
+    examples: |
+      - Can I have description of ["The Silence of the Lambs"](film)?
+      - Can you give me information about ["Black Panther"](film)?
+      - Give me more information about ["The Silence of the Lambs"](film)?
+      - Give me information about ["Zombieland"](film)?
+      - Can i see the information about ["The Hidden Fortress"](film)?
+      - Give me information about ["Throne of Blood"](film)?
+      - Give me information about ["The Bad Sleep Well"](film)?
+      - Give me information about ["The Bridge on the River Kwai"](film)?
+      - Give me information about ["The Lower Depths"](film)? 
+
+  - intent: movie_recommendation_description
+    examples: |
+      - Can I have description?
+      - Description  
+      - Can i see the plot?
+      - Plot?
+
+  - intent: movie_recommendation_director_based
+    examples: |
+      - I'd like to see some wovie directed by [Akira Kurosawa](director)
+      - I want to see something from [Akira Kurosawa](director)
+      - I want to watch a film directed by [Steven Spielberg](director)
+      - Can you give me movies directed by [Kurosawa](director)? 
+      - Can you give me movies directed by [Scorsese](director)? 
+      - Can you give me movies directed by [Dolan](director)? 
+      - I want to see something from [Martin Scorsese](director)
+      - I want to see something from [James Cameron](director)
+      - I want to see something from [Michael Mann](director)
+      - I want to see something from [Jane Campion](director)
+      - Show me films directed by [Ridley Scott](director)
+      - Show me films directed by [George Lucas](director)
+      - Show me films directed by [Mel Brooks](director)
+      - Show me films directed by [Bong Joon-ho](director)
+      - Show me films directed by [Takeshi Kitano](director)
+      - Show me films directed by [Melville](director)
+      - Show me films directed by [Xavier Dolan](director)
+      - Show me films directed by [Robert Bresson](director)
+      - Show me films directed by [Kobayashi](director)
+      - Show me films directed by [Henri Verneuil](director)
+      - Show me films directed by [Lautner](director)
+      - Show me films directed by [Abe](director)
+      - Give me films of [Martin Scorsese](director)
+      - Give me something directed by [Quentin Tarantino](director)
+      - Give me films of [Martin Scorsese](director)
+      - Give me films of [David Lean](director)
+      - Give me films of [Christopher Nolan](director)
+      - Give me films of [Murnau](director)
+      - Give me films of [David Fincher](director)
+      - Give me films of [Thomas Anderson](director)
+      - Show me films of [Hitchcock](director)
+      - Show me films of [Jean Renoir](director)
+      - Show me films of [Woody Allen](director)
+      - Show me films of [Ford Coppola](director)
+      - Show me films of [Eisenstein](director)
+      - Show me films of [Polanski](director)
+      - Show me movies of [Eisenstein](director)
+      - Show me movies of [Godard](director)
+      - Show me movies of [Tim Burton](director)
+      - Show me movies of [Truffaut](director)
+      - Show me movies of [Eisenstein](director)
+      - Show me movies of [Yasujiro Ozu](director)
+      - Show me movies of [Kieslowski](director)
+      - Show me movies of [Bong Joon Ho](director)
+      - Show me movies of [Guillermo del Toro](director)
+      - Show me movies of [Wes Anderson](director)
+      - Show me movies of [Terrence Malick](director)
+      - Show me movies of [The Coen Brothers](director)
+      - what movies were directed by [Andrei Tarkovsky](director)
+      - what movies were directed by [Kubrick](director)
+      - what movies were directed by [Truffaut](director)
+      - what movies were directed by [Fellini](director)
+      - what movies were directed by [Antonioni](director)
+      - what movies were directed by [Bresson](director)
+      - what movies were directed by [Marcel Pagnol](director)
+      - what movies were directed by [Clouzot](director)
+      - what movies were directed by [Melville](director)
+
+  - lookup: director
+    examples: |
+      - steven spielberg
+      - christopher nolan
+      - quentin tarantino
+      - scott rudin
+      - charles roven
+      - peter jackson
+      - ridley scott
+      - martin scorsese
+      - joel silver
+      - tim bevan
+      - lawrence bender
+      - david fincher
+      - david heyman
+      - emma thomas
+      - brian grazer
+      - eric fellner
+      - robert zemeckis
+      - arnon milchan
+      - neal h. moritz
+      - michael bay
+      - tim burton
+      - rick mccallum
+      - barrie m. osborne
+      - jason blum
+      - james cameron
+      - ian bryce
+      - frank marshall
+      - walter f. parkes
+      - francis ford coppola
+      - ethan coen
+      - chris columbus
+      - ron howard
+      - joel coen
+      - bryan singer
+      - lauren shuler donner
+      - steve golin
+      - mark gordon
+      - stanley kubrick
+      - lorenzo di bonaventura
+      - judd apatow
+      - matthew vaughn
+      - steve starkey
+      - jon kilik
+      - art linson
+      - frank darabont
+      - sam raimi
+      - zack snyder
+      - stacey sher
+      - gore verbinski
+      - peter chernin
+      - george lucas
+      - lana wachowski
+      - simon kinberg
+      - guy ritchie
+      - lilly wachowski
+      - alfred hitchcock
+      - patrick crowley
+      - danny boyle
+      - m. night shyamalan
+      - robert rodriguez
+      - steven soderbergh
+      -  steve tisch
+      - andrew macdonald
+      - todd phillips
+      - mark johnson
+      - bruce davey
+      - mike medavoy
+      - jack giarraputo
+      - david yates
+      - tom rosenberg
+      - denise di novi
+      - anthony russo
+      - joe russo
+      - james wan
+      - michael mann
+      - sam mendes
+      - john lasseter
+      - shawn levy
+      - alfonso cuarón
+      - larry franco
+      - daniel goldberg
+      - darren aronofsky
+      - andrew stanton
+      - carolynne cunningham
+      - roland emmerich
+      - irwin winkler
+      - bruce cohen
+      - luc besson
+      - guillermo del toro
+      - todd black
+      - branko lustig
+      - francis lawrence
+      - jon favreau
+      - tony scott
+      - scott stuber
+      - barbara broccoli
+      - brett ratner
+      - jon landau
+      - gary kurtz
+      - brad bird
+      - joss whedon
+      - paula wagner
+      - james mangold
+      - pete docter
+      - brian de palma
+      - niki marvin
+      - adam mckay
+      - wes anderson
+      - denis villeneuve
+      - doug liman
+      - elizabeth avellan
+      - chris bender
+      - edgar wright
+      - antoine fuqua
+      - edward zwick
+      - hayao miyazaki
+      - john mctiernan
+      - jay roach
+      - robert lorenz
+      - ivan reitman
+      - michael shamberg
+      - alejandro g. iñárritu
+      - oliver stone
+      - clint eastwood
+      - shauna robertson
+      - christian colson
+      - barry sonnenfeld
+      - anthony bregman
+      - louis leterrier
+      - joel schumacher
+      - jonathan demme
+      - peter berg
+      - paul greengrass
+      - richard donner
+      - stuart cornfeld
+      - roman polanski
+      - peter farrelly
+      - rob reiner
+      - peter weir
+      - jeremy bolt
+      - david o. russell
+      - dan jinks
+      - mary parent
+      - joe johnston
+      - ross grayson bell
+      - tom desanto
+      - marc forster
+      - edward saxon
+      - woody allen
+      - richard linklater
+
+  - intent: movie_recommendation_genre_based
+    examples: |
+      - tell me [comedy](genre) movie
+      - tell me [action](genre) movie
+      - tell me [horror](genre) movie
+      - give me [comedy](genre) movie
+      - give me [action](genre) movie
+      - give me [horror](genre) movie
+
+  - lookup: genre
+    examples: |
+      - Action
+      - Adventure
+      - Animation
+      - Comedy 
+      - Crime 
+      - Documentary 
+      - Drama 
+      - Drama, comedy
+      - Family 
+      - Fantasy 
+      - History 
+      - Horror 
+      - Mystery 
+      - Romance
+      - Romance, comedy
+      - Science Fiction
+      - Thriller
+      - War
+      - Western
+
+  - regex: film
+    examples: | 
+      - \"'.*'.*\"
+  - regex: id
+    examples: |
+      - [0-9]+
+  - regex: plot
+    examples: | 
+      - \"'.*'.*\"
+  - intent: movie_watched_recently
+    examples: |
+      - I want to see something like ["Dr. Strangelove"](film)
+      - Give me similar movies to ["Gone with the Wind"](film)
+      - I watched ["Rashomon"](film), so I'd like to have some recommendation
+      - I watched ["Dr. Strangelove"](film)
+      - I watched ["Singin' in the Rain"](film)
+      - I watched ["Gone with the Wind"](film)
+      - I watched [E.T. the Extra-Terrestrial](film)
+      - I watched [One Flew Over the Cuckoo's Nest](film)
+      - Similar to [No Country for Old Men](film)
+      - I watched [The Lord of the Rings The Two Towers](film)
+      - I watched [The Good, the Bad and the Ugly](film)
+      - I watched ["The Silence of the Lambs"](film)
+      - I watched ["The Godfather 2"](film)
+      - I watched [The Godfather Part II](film)
+      - I watched [No Country for Old Men](film)
+      - I watched [Paddington 2](film) 
+      - [Pulp Fiction](film), it was great
+      - [The Artist](film), but I didn't like it
+      - last film I watched was [Frankenstein](film), it was quite good 
+      - I watched the great [Anatomy of a Murder](film)
+      - It was a bad movie, [Avenger Endgame](film)
+      - I watched [A Better Tomorrow](film)
+      - I watched [A Better Tomorrow II](film), it was great
+      - I watched [Black Panther](film), it was so bad
+      - I watched [Zombieland](film)
+      - I watched [Coco](film)
+      - I watched [The Silence of the Lambs](film)
+      - I watched [Ace Ventura Pet Detective](film)
+      - I watched [Match Point](film)
+      - I watched [The Hateful Eight](film)
+      - I watched [Ex Machina](film)
+      - I watched [Se7en](film)
+      - I watched [The Bridge on the River Kwai](film)
+      - I watched [Sicario](film)
+      - I watched [Inside Out](film)
+      - I watched [Slow West](film)
+      - I watched [The big short](film)
+      - I watched [The Ballad of Buster Scruggs](film)
+      - I watched [The Hateful Eight](film)
+      - I watched [Mission Impossible Fallout](film)
+      - I watched [I am not a witch](film)
+      - I watched [Avengers Endgame](film)
+      - It was [The Lord of the Rings: The Fellowship of the Ring](film)
+      - It was [Butch Cassidy and the Sundance Kid](film)
+      - It was [Kill Bill](film)
+      - It was [Schindler's List](film)
+      - It was [Ace Ventura Pet Detective](film)
+      - It was [Joker](film)
+      - ["The Shawshank Redemption"](film)
+      - ["Who's Afraid of Virginia Woolf?"](film)
+      - ["12 Angry Men"](film)
+      - ["Sunrise: A Song of Two Humans"](film)
+      - ["The Lord of the Rings The Two Towers"](film)
+      - ["The rule of the game"](film)
+
+  - intent: movie_plot
+    examples: |
+      - It was about [a dog and a little girl](plot)
+      - It was about [a genie](plot)
+      - It was about [John Kennedy](plot)
+      - It was about [a man and his family going to a isolated hotel and going mad and trying to kill them](plot)
+      - It was about [a serial killer named Jack that has OCD and it shows how his mental illness impacts his killings](plot)
+      - It was about [a serial killer named Jack with OCD](plot)
+      - I don't remember everything but there was [a group of teenagers hunting for monsters and ghosts. They had a van that was green and blue](plot)
+      - It was about [a young couple going to a festival in Sweden with some friends and it turning out to be a cult] (plot)
+      - It was about [a cult in Sweden](plot)
+      - It was about [halloween and christmas](plot)
+      - It was about [a poor family scamming a rich family](plot)
+      - I think it was about [](plot)
+
+  - lookup: plot
+    examples: |    
+      - a dog and a little girl
+      - a genie
+      - santas claus
+      - John Kennedy
+      - Michael Jackson
+      - a spaceship
+      - it was about an alien befriending a boy
+      - a man getting bit by a spider and having super powers, shooting webs and fighting evil
+      - a man and his family going to a recluse house and going mad and trying to kill them
+      - a young couple going to a festival in Sweden with some friends and it turning out to be a cult
+      - a serial killer named Jack that has OCD and it shows how his mental illness impacts his killings
+      - a group of teenagers hunting for monsters and ghosts. They had a van that was green and blue
+  - intent: ask_for_cinema_nearby
+    examples: |
+      
+      - I want to know what are the cinema nearby
+      - What cinemas are there nearby
+
+  - intent: ask_movie_no_title
+    examples: |
+      - I watched a movie but can't remember the name
+      - I'd like to look for a movie that i've watched
+      - I am having trouble remembering the title of a movie i've watched
+      - help me look for a movie with a description
+      - help me find this movie i can't remember the name of
+      - Help me find the title to a movie i've watched

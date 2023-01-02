@@ -1,0 +1,5 @@
+Pillow~=9.2.0
+tmdbv3api~=1.7.7
+pandas~=1.5.1
+python-dotenv~=0.21.0
+geopy~=2.3.0

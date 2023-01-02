@@ -1,0 +1,15 @@
+/myenv
+chatbot/models
+/chatbot/models/
+api.py
+/chatbot/.rasa/
+/chatbot/.rasa/cache/
+.env
+/chatbot/credentials.yml
+.idea
+/chatbot/out.log
+/widget/
+.rasa
+.keras
+.config
+/actions/__pycache__

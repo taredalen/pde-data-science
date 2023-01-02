@@ -1,0 +1,43 @@
+rules:
+
+- rule: Greet the user in Telegram
+  steps:
+  - intent: start
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: activate get_address_form
+  steps:
+    - intent: ask_for_cinema_nearby   # intent that triggers form activation
+    - action: get_adress_form      # run the form
+    - active_loop: get_adress_form
+
+- rule: submit get_address_form
+  condition:
+  - active_loop: get_address_form   # this form must be active
+  steps:
+    - action: get_address_form      # run the form
+    - active_loop: null            # the form is no longer active because it has been filled     # action to take after the form is complete
+    - action: action_get_cinema_near
+
+
+- rule: Search movie title
+  steps:
+    - intent: movie_plot
+    - action: action_movie_search
+
+- rule: Re start movie title search
+  steps:
+  - action: action_movie_search
+  - intent: deny
+  - action: utter_plot_again
+  - action: utter_plot

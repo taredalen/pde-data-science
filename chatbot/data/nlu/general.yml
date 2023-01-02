@@ -1,0 +1,312 @@
+version: "3.1"
+
+nlu:
+  - intent: deny
+    examples: |
+      - no
+      - I don't
+      - no, thank you
+      - not now
+      - I don't wanna
+      - how about no
+      - don t have a sense
+      - no
+      - don't
+      - I don't want that
+      - I disagree
+      - disagree
+      - I don't want
+      - not interested
+      - I don't think so
+      - no way
+      - no it isn't
+      - no I don't
+      - I'm not
+      - na
+      - no that's fine thank you
+      - never
+      - I said no
+      - of course not
+      - nah
+      - no tanks
+      - no never
+      - no need
+      - no thanks
+      - no sorry
+      - do not
+      - not today
+      - no it's not
+      - absolutely not
+      - not that
+      - nooo
+      - nope
+      - I don't want to
+      - no I would not
+      - let 's not
+      - not needed
+      - not this time
+      - no don't do that
+      - thanks but no thanks
+      - no that's wrong
+      - not this
+      - definitely not
+      - not at this time
+      - not exactly
+      - no don't
+      - not really no
+      - no thank you not right now
+      - actually no
+      - no leave it
+      - sorry no
+      - no incorrect
+      - nope sorry
+      - I say no
+      - not really
+      - not right now thanks
+      - I think no
+      - absolutely no
+      - no actually
+      - apparently not
+      - no do not
+      - no just no
+      - no but thank you
+      - no need thanks
+      - no thank you though
+      - no thank you very much
+      - no thanks not right now
+      - no forget
+
+  - intent: affirm
+    examples: |
+      - yes
+      - of course
+      - obviously
+      - yep
+      - yeah
+      - yes yes
+      - right on
+      - that's correct
+      - it's fine
+      - go ahead
+      - sounds good
+      - okay
+      - yes
+      - ok
+      - okie dokie
+      - sure
+      - go for it
+      - yeah
+      - yea
+      - do it
+      - of course
+      - I guess
+      - correct
+      - yeah sure
+      - why not
+      - please do
+      - sure is
+      - I agree
+      - I don't mind
+      - certainly
+      - exactly
+      - yes I agree
+      - I think so
+      - yes it is
+      - right
+      - okay then
+      - yes of course
+      - yes I do
+      - that s okay
+      - I do
+      - yup
+      - ya
+      - oh yes
+      - yes sure
+      - obviously
+      - k
+      - sure why not
+      - yeah right
+      - yeah of course
+      - absolutely
+      - yes indeed
+      - ok sure
+      - ok yes
+      - yes correct
+      - ok thank you
+      - sure thing
+      - ye
+      - confirm
+      - yep
+      - looks good
+      - yes thank you
+      - definitely
+      - yes right
+      - yes I would like to
+      - alrighty
+      - yes definitely
+      - yeh
+      - yes it is correct
+      - yeah that's right
+      - ok you can
+      - yap
+      - yes you may
+      - confirmed
+      - of course why not
+      - yes that's fine
+      - affirmative
+      - yeah go ahead
+      - yeah I'm sure
+      - okay sounds good
+      - okay that's fine
+      - yeah exactly
+      - that is ok
+      - this is correct
+      - ok go ahead
+      - yes this is correct
+      - nevermind its okay
+      - okey
+      - yes for sure
+      - all right
+  
+  - intent: goodbye
+    examples: |
+      - okay see you later
+      - hope to see you later
+      - bye for now
+      - till next time
+      - I must go
+      - bye
+      - goodbye
+      - see you
+      - see you soon
+      - bye-bye
+      - good bye
+      - bye bye see you
+      - bye bye see you soon
+      - bye bye take care
+      - I said bye
+      - never mind bye
+      - now bye
+      - that's all goodbye
+      - that's it goodbye
+      - leave me alone
+      - go to bed
+      - goodbye for now
+      - talk to you later
+      - you can go now
+      - get lost
+      - goodbye see you later
+      - alright bye
+      - see ya
+      - thanks bye bye
+      - okay bye
+      - okay thank you bye
+      - see you tomorrow
+      - ok bye
+
+  - intent: greet
+    examples: |
+      - good evening
+      - good evening to you
+      - hey good evening
+      - hello good evening
+      - evening
+      - good evening there
+      - good morning
+      - good morning to you
+      - hello good morning
+      - have a nice morning
+      - have a great morning
+      - morning
+      - good morning there
+      - top of the morning to you
+      - a good morning
+      - hi good morning
+      - and a good morning to you
+      - long time no see
+      - hello
+      - hi
+      - howdy
+      - hey there
+      - hey
+      - greetings
+      - I greet you
+      - hi there
+      - hello there
+      - lovely day isn't it
+      - hello again
+      - just going to say hi
+      - a good day
+      - afternoon
+      - hello hi
+      - heya
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+      - I am good
+      - I'm doing just great
+      - I'm doing fine
+      - I'm good
+      - I'm doing good
+      - I'm great thanks
+      - I am happy
+      - I'm happy to see you
+      - happy
+      - if you're happy then I'm happy
+      - I'm happy for you
+      - I'm happy to help
+      - I'm happy to see you
+
+  - intent: mood_unhappy
+    examples: |
+      - I am lonely
+      - I'm very lonely
+      - I'm so lonely
+      - I'm really lonely
+      - I am feeling lonely
+      - I feel lonely
+      - I am sad
+      - I'm grieving
+      - I am depressed
+      - I am feeling sad
+      - I am upset
+      - I'm unhappy
+      - I'm having a bad day
+      - I want to cry
+      - I'm not happy 
+      - I'm drained
+      - I've overworked
+      - I am tired
+      - I'm exhausted
+      - I grow weary
+      - I'm worn out
+      - I'm getting tired
+      - I feel tired
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad

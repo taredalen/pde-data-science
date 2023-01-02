@@ -1,0 +1,179 @@
+version: "3.1"
+
+stories:
+
+- story: give movie information
+  steps:
+  - intent: movie_id
+    entities:
+      - id: from_entity
+  - action: action_get_movie_information
+
+- story: recommend movie based on director
+  steps:
+  - intent: movie_recommendation_director_based
+    entities:
+      - director: from_entity
+  - action: action_get_movie_recommendation_director_based
+
+- story: recommend movie based on title
+  steps:
+  - intent: movie_watched_recently
+    entities:
+      - film: from_entity
+  - action: action_get_movie_recommendation_title_based
+
+- story: recommend movie based on genre
+  steps:
+  - intent: movie_recommendation_genre_based
+    entities:
+      - genre: from_entity
+  - action: utter_wait_1
+  - action: action_get_movie_recommendation_genre_based
+  - intent: movie_recommendation_description
+  - action: action_get_movie_description
+  - action: utter_help_1
+
+- story: get movie description
+  steps:
+  - intent: movie_recommendation_description
+  - action: action_get_movie_description
+  - action: utter_help_1
+  - intent: deny
+  - action: utter_goodbye
+
+- story: happy path + movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_help_2
+  - intent: movie_recommendation_genre_based
+  - action: utter_wait_1
+  - action: action_get_movie_recommendation_genre_based
+  - intent: movie_recommendation_description
+  - action: action_get_movie_description
+  - action: utter_help_1
+  - intent: deny
+  - action: utter_goodbye
+
+- story: sad path + movie
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: affirm
+  - action: utter_wait_1
+  - action: action_get_movie_recommendation
+  - intent: movie_recommendation_description
+  - action: action_get_movie_description
+  - action: utter_help_1
+  - intent: deny
+  - action: utter_goodbye
+
+- story: happy path + plot + movie title correct
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_help_2
+  - intent: ask_movie_no_title
+  - action: utter_plot
+  - intent: movie_plot
+    entities:
+      - plot: from_entity
+  - action: action_movie_search
+  - intent: affirm
+  - action: utter_help_1
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_for_cinema_nearby
+  - action: get_adress_form
+  - active_loop: get_adress_form
+  - slot_was_set:
+    - requested_slot: country
+  - slot_was_set:
+    - country: France
+  - slot_was_set:
+    - requested_slot: city
+  - slot_was_set:
+    - city: Paris
+  - slot_was_set:
+    - requested_slot: address
+  - slot_was_set:
+    - address: bamboo
+  - slot_was_set:
+    - requested_slot: confirm_address
+  - slot_was_set:
+    - confirm_address: false
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_cinema_near
+  - slot_was_set:
+    - country: null
+  - slot_was_set:
+    - city: null
+  - slot_was_set:
+    - address: null
+  - slot_was_set:
+    - confirm_address: null
+  - intent: affirm
+  - action: get_adress_form
+  - active_loop: get_adress_form
+  - slot_was_set:
+    - requested_slot: country
+  - slot_was_set:
+    - country: France
+  - slot_was_set:
+    - requested_slot: city
+  - slot_was_set:
+    - city: Meudon
+  - slot_was_set:
+    - requested_slot: address
+  - slot_was_set:
+    - address: 9 avenue Marcellin Berthelot
+  - slot_was_set:
+    - requested_slot: confirm_address
+  - slot_was_set:
+    - confirm_address: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_cinema_near
+  - intent: smalltalk_appraisal_thank_you
+  - action: utter_smalltalk_appraisal_well_done
+
+- story: interactive_story_2
+  steps:
+  - intent: ask_for_cinema_nearby
+  - action: get_adress_form
+  - active_loop: get_adress_form
+  - slot_was_set:
+    - requested_slot: country
+  - slot_was_set:
+    - country: France
+  - slot_was_set:
+    - requested_slot: city
+  - slot_was_set:
+    - city: Paris
+  - slot_was_set:
+    - requested_slot: address
+  - slot_was_set:
+    - address: 11 rue blanche
+  - slot_was_set:
+    - requested_slot: confirm_address
+  - slot_was_set:
+    - confirm_address: true
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_get_cinema_near
+  - intent: smalltalk_appraisal_thank_you
+  - action: utter_smalltalk_appraisal_well_done
+

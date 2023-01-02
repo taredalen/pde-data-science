@@ -1,0 +1,213 @@
+version: "3.1"
+
+intents:
+  - deny
+  - affirm
+  - goodbye
+  - greet
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - smalltalk_appraisal_thank_you
+  - movie_id
+  - movie_information
+  - movie_recommendation_description
+  - movie_recommendation_director_based
+  - movie_recommendation_genre_based
+  - movie_watched_recently
+  - ask_for_cinema_nearby
+  - movie_plot
+  - ask_movie_no_title
+
+entities:
+  - film
+  - movie_recommendation
+  - movie_description
+  - movie_recommendation_genre_based
+  - director
+  - id
+  - genre
+  - plot
+
+
+forms:
+  get_adress_form:
+    required_slots:
+    - country
+    - city
+    - address
+    - confirm_address
+
+slots:
+  film:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: film
+  plot:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: plot
+  movie_recommendation:
+    type: any
+    mappings:
+    - type: from_text
+      entity: movie_recommendation
+  movie_description:
+    type: any
+    mappings:
+      - type: from_text
+        entity: movie_description
+  movie_recommendation_genre_based:
+    type: any
+    mappings:
+      - type: from_text
+        entity: movie_recommendation_genre_based
+  director:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: director
+  id:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: id
+  genre:
+    type: any
+    mappings:
+      - type: from_entity
+        entity: genre
+  country:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        entity: country
+        conditions:
+          - active_loop: get_adress_form
+            requested_slot: country
+  city:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        entity: city
+        conditions:
+          - active_loop: get_adress_form
+            requested_slot: city
+  address:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        entity: address
+        conditions:
+          - active_loop: get_adress_form
+            requested_slot: address
+  confirm_address:
+    type: bool
+    mappings:
+      - type: from_intent
+        intent: affirm
+        value: true
+        conditions:
+          - active_loop: get_adress_form
+            requested_slot: confirm_address
+      - type: from_intent
+        intent: deny
+        value: false
+        conditions:
+          - active_loop: get_adress_form
+            requested_slot: confirm_address
+
+
+responses:
+  utter_ask_country:
+    - text: "In which country do you live?"
+  utter_ask_city:
+    - text: "In which city?"
+  utter_ask_address:
+    - text: "And what's your address?"
+  utter_ask_confirm_address:
+    - text: "Are you sure this is correct :\n
+      -{country}\n
+      -{city}\n
+      -{address}\n"
+
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Heeey! How it's going?"
+
+  utter_cheer_up:
+  - text: "I'm sad about it. Do you want some movie recommendations to cheer you up?"
+  - text: "I'm sorry for this. Do you want some movie recommendations to cheer you up?"
+
+  utter_recommand_movie_on_mood:
+    - text: "There is my recommendation"
+
+  utter_getting_description:
+   - text: "Ok, getting weather of [movie_description] ..."
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye 👋"
+  - text: "See you soon 👋"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  - text: "I'm a conversational app."
+  - text: "I'm a virtual being, a bot."
+  - text: "Well, I'm a virtual agent."
+  - text: "Think of me as a virtual agent."
+  - text: "I'm a virtual agent."
+
+  utter_movie:
+  - text: "Do you want me to look for a movie?"
+  - text: "Do you need me to look for a movie?"
+  - text: "Would you like to look for a movie?"
+
+  utter_plot:
+  - text: "Okay! Write the plot of the movie title you are looking for."
+
+  utter_title_question:
+    - text: " Great! Type it out "
+
+  utter_plot_again:
+  - text: "Let's try again. Maybe be more specific with your plot."
+
+  utter_help_1:
+  - text: "Is there anything else I can help with?"
+  - text: "Something else?"
+
+  utter_help_2:
+  - text: "Cool! How can I help you?"
+  - text: "Great! How can I help you?"
+
+  utter_wait_1:
+  - text: "Nice! What about this one"
+  - text: "Great! Look at this"
+
+  utter_smalltalk_appraisal_well_done:
+    - text: My pleasure.
+    - text: Glad I could help.
+
+  utter_wait_2:
+  - text: "Give me a second..."
+  - text: "I'm searching..."
+
+actions:
+  - action_movie_search
+  - action_get_movie_recommendation
+  - action_get_movie_description
+  - action_get_movie_recommendation_genre_based
+  - action_get_movie_recommendation_title_based
+  - action_get_movie_recommendation_director_based
+  - action_get_movie_information
+  - action_get_cinema_near
