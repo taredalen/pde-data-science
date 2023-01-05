@@ -171,8 +171,10 @@ class ActionDirector(Action):
         director_movies = []
         print('------------------------------')
         print(tracker.get_slot('director'))
+        x = "query=" + tracker.get_slot('director')
+        print(x)
         print('------------------------------')
-        director = search.people('query=' + tracker.get_slot('director'))
+        director = search.people({"query":tracker.get_slot('director')})
         director_credits = person.combined_credits(director[0]['id'])
 
         for credit in director_credits['crew']:
