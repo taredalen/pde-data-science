@@ -8,7 +8,7 @@ api.py
 /chatbot/credentials.yml
 .idea
 /chatbot/out.log
-/widget/
+
 .rasa
 .keras
 .config

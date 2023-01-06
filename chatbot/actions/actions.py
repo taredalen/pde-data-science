@@ -307,17 +307,16 @@ def MoviePlotCSV(plot):
     df_db['Keywords found'] = df_db['Pro Plot'].str.findall('|'.join(pro_plot))
     movies_found=[]
     for i in range (len(df_db.index)):
-        wordset=set(df_db.at[i,'Keywords found'])
-        percent=round(100*(len(wordset)/len(set(pro_plot))),2)
-        df_db['Accuracy']=percent
+        wordset = set(df_db.at[i, 'Keywords found'])
+        percent=(100*(len(wordset)/len(set(pro_plot))))
         name=df_db.at[i,'Title']
         year=df_db.at[i,'Release Year']
         wiki=df_db.at[i,'Wiki Page']
+        percent=round(percent,2)
         movies_found.append((str(percent), name, str(year),wiki))
         movies_found.sort(key=lambda x: x[0],reverse=True)
     acc_movies = movies_found[:8]
     return acc_movies
-    #return tabulate(df_res[0:10], headers='keys', tablefmt='psql',showindex=False)
 
 def get_wordnet_pos(pos_tag):
     if pos_tag.startswith('J'):
@@ -348,11 +347,10 @@ class MoviePlotSearch(Action):
         movies = MoviePlotCSV(current_plot)
         data=[]
         for movie in movies:
-            # dispatcher.utter_message(f"This cinema is near:\n{cinema[1]}\n{cinema[2]}")
             data.append(
                 {"title": movie[1]+ ", "+movie[2] + ", Match:"+ movie[0]+"%", "description": movie[3]})
 
-        message = {"payload": "collapsible", "data": data}
+        message = {"payload": "cardsCarousel", "data": data}
         dispatcher.utter_message(text="Here are the movies i found, from most accurate to least:\n", json_message=message)
         dispatcher.utter_message("Are any of those movies the one you were looking for ?")
         return []
