@@ -50,6 +50,8 @@ function setBotResponse(response) {
             const BotResponse = `<img class="botAvatar" src="./static/img/sara_avatar.png"/><p class="botMsg">${fallbackMsg}</p><div class="clearfix"></div>`;
 
             $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
+            let msg = new SpeechSynthesisUtterance(fallbackMsg);
+            speechSynthesis.speak(msg);
             scrollToBottomOfResults();
         } else {
             // if we get response from Rasa
@@ -92,6 +94,8 @@ function setBotResponse(response) {
                         }
                         // append the bot response on to the chat screen
                         $(botResponse).appendTo(".chats").hide().fadeIn(1000);
+                        let msg = new SpeechSynthesisUtterance(response[i].text);
+                        speechSynthesis.speak(msg);
                     }
                 }
 
@@ -238,6 +242,8 @@ function send(message) {
                 // customActionTrigger();
                 return;
             }
+
+        
             setBotResponse(botResponse);
         },
         error(xhr, textStatus) {
