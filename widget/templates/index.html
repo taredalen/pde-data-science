@@ -85,8 +85,8 @@
         </div>
 
         <!--keypad for user to type the message -->
-        <div class="keypad" contenteditable>
-          <textarea 
+        <div class="keypad">
+          <textarea contenteditable
             id="userInput"
             placeholder="Type a message..."
             class="usrInput"
@@ -112,13 +112,14 @@
                 .map(result => result.transcript)
                 .join('')
   
-            document.getElementById("p").innerHTML = transcript;
+            document.getElementById("userInput").value = transcript;
             console.log(transcript);
         });
           
         if (speech == true) {
             recognition.start();
             recognition.addEventListener('end', recognition.start);
+            recognition.addEventListener('end', e => console.log("end"));
         }
       </script>
 

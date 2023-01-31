@@ -51,6 +51,7 @@ function setBotResponse(response) {
 
             $(BotResponse).appendTo(".chats").hide().fadeIn(1000);
             let msg = new SpeechSynthesisUtterance(fallbackMsg);
+            msg.lang = 'en-US';
             speechSynthesis.speak(msg);
             scrollToBottomOfResults();
         } else {
@@ -95,6 +96,7 @@ function setBotResponse(response) {
                         // append the bot response on to the chat screen
                         $(botResponse).appendTo(".chats").hide().fadeIn(1000);
                         let msg = new SpeechSynthesisUtterance(response[i].text);
+                        msg.lang = 'en-US';
                         speechSynthesis.speak(msg);
                     }
                 }

@@ -1,32 +1,25 @@
-import pyttsx3
 
-
-def text_to_speech(text):
-    """
-    Function to convert text to speech
-    :param text: text
-    :param gender: gender
-    :return: None
-    """
-    voice_dict = {'Male': 0, 'Female': 1}
-
-    engine = pyttsx3.init()
-
-    # Setting up voice rate
-    engine.setProperty('rate', 125)
-
-    # Setting up volume level  between 0 and 1
-    engine.setProperty('volume', 0.8)
-
-    engine.say(text)
-    engine.runAndWait()
 
 
 # Importing the necessary Libraries
 from flask_cors import cross_origin
 from flask import Flask, render_template, request
+import speech_recognition as sr
 
 app = Flask(__name__)
+r = sr.Recognizer()
+
+def stt():
+    with sr.Microphone as source2:
+        r.adjust_for_ambient_noise(source2, duration=0.2)
+        audio2  = r.listen(source2)
+
+        text = r.recognize_google(audio2)
+        text = text.lower()
+
+        print(text)
+
+        return text
 
 
 
@@ -34,10 +27,8 @@ app = Flask(__name__)
 @cross_origin()
 def homepage():
     if request.method == 'POST':
-        print(request.get_json())
-        print("hello")
-        #text = request.form['botMsg']
-        #text_to_speech(text)
+        stt()
+        print("not hello")
         return render_template('index.html')
     if request.method == 'GET':
         print("hello")
