@@ -24,10 +24,10 @@
 
 ## Key Features
 
-| Feature 1                    | Feature 2                    |
-|------------------------------|------------------------------|
-| ![screenshot](docs/gif1.gif) | ![screenshot](docs/gif2.gif) |
-| bla bla                      |                              |
+| Feature 1                    | Feature 2                    | Feature 3                    | Feature 3                    |
+|------------------------------|------------------------------|------------------------------|------------------------------|
+| ![screenshot](docs/gif1.gif) | ![screenshot](docs/gif2.gif) | ![screenshot](docs/gif2.gif) | ![screenshot](docs/gif2.gif) |
+| bla bla                      | v                            | v                            | ff                           |
 
 ## How to use
 
