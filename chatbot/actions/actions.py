@@ -17,6 +17,15 @@ from rasa_sdk.executor import CollectingDispatcher
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
 
+import numpy as np
+import os
+import nltk
+from nltk.corpus import wordnet
+from nltk.corpus import stopwords
+from tabulate import tabulate
+from nltk import word_tokenize, WordNetLemmatizer
+from nltk import pos_tag
+
 load_dotenv()
 
 tmdb = TMDb()
