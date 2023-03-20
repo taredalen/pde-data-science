@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="docs/bot.svg"><img src="docs/bot.svg" alt="Markdownify" width="200"></a>
+  <a href="docs/bot.svg"><img src="docs/bot.svg" alt="Markdownify" width="200" id="bot"></a>
   <br>
   Open-source chatbot with Rasa and the NLP
   <br>

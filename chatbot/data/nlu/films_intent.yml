@@ -289,7 +289,9 @@ nlu:
   - regex: id
     examples: |
       - [0-9]+
-
+  - regex: plot
+    examples: | 
+      - \"'.*'.*\"
   - intent: movie_watched_recently
     examples: |
       - I want to see something like ["Dr. Strangelove"](film)
@@ -351,3 +353,13 @@ nlu:
     examples: |
       - I want to know what are the cinema nearby
       - What cinemas are there nearby
+      
+
+  - intent: ask_movie_no_title
+    examples: |
+      - I watched a movie but can't remember the name
+      - I'd like to look for a movie that i've watched
+      - I am having trouble remembering the title of a movie i've watched
+      - help me look for a movie with a description
+      - help me find this movie i can't remember the name of
+      - Help me find the title to a movie i've watched

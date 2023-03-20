@@ -16,6 +16,8 @@ intents:
   - movie_recommendation_genre_based
   - movie_watched_recently
   - ask_for_cinema_nearby
+  - movie_plot
+  - ask_movie_no_title
 
 entities:
   - film
@@ -25,6 +27,7 @@ entities:
   - director
   - id
   - genre
+  - plot
 
 
 forms:
@@ -41,6 +44,11 @@ slots:
     mappings:
     - type: from_entity
       entity: film
+  plot:
+    type: any
+    mappings:
+    - type: from_entity
+      entity: plot
   movie_recommendation:
     type: any
     mappings:
@@ -168,6 +176,12 @@ responses:
   utter_plot:
   - text: "Okay! Write the plot of the movie title you are looking for."
 
+  utter_title_question:
+    - text: " Great! Type it out "
+
+  utter_plot_again:
+  - text: "Let's try again. Maybe be more specific with your plot."
+
   utter_help_1:
   - text: "Is there anything else I can help with?"
   - text: "Something else?"
@@ -197,3 +211,4 @@ actions:
   - action_get_movie_recommendation_director_based
   - action_get_movie_information
   - action_get_cinema_near
+  - action_movie_search

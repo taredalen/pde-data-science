@@ -279,3 +279,71 @@ class ActionGetCinemaNear(Action):
 
         return [SlotSet("country", None), SlotSet("city", None), SlotSet("address", None),
                 SlotSet("confirm_address", None)]
+
+
+# ----------------------------------------------------------------------------------------------------------------------
+def preprocess(pre_plot):
+    # plot=plot.split()
+    pos_tagged_plot = nltk.pos_tag(word_tokenize(pre_plot))
+    lemmatizer = WordNetLemmatizer()
+    l_plot = [lemmatizer.lemmatize(word[0], get_wordnet_pos(word[1])) for word in pos_tagged_plot]
+    plot = [word.lower() for word in l_plot]
+    stoplist = stopwords.words('english')
+    stop_punctuation = [':', '(', ')', '/', '|', ',',
+                        '.', '*', '#', '"', '&', '~', '...',
+                        '-', '_', '\\', '@', '?', '!', '\'']
+    return [word for word in plot if word not in stoplist and word not in stop_punctuation]
+def MoviePlotCSV(plot):
+    pro_plot=preprocess(plot)
+    print(pro_plot)
+    df_db= pd.read_csv(os.getcwd() + "/csv/movie_plot_pro.csv", sep=',')
+    df_db['Keywords found'] = df_db['Pro Plot'].str.findall('|'.join(pro_plot))
+    movies_found=[]
+    for i in range (len(df_db.index)):
+        wordset = set(df_db.at[i, 'Keywords found'])
+        percent=(100*(len(wordset)/len(set(pro_plot))))
+        name=df_db.at[i,'Title']
+        year=df_db.at[i,'Release Year']
+        wiki=df_db.at[i,'Wiki Page']
+        percent=round(percent,2)
+        movies_found.append((str(percent), name, str(year),wiki))
+        movies_found.sort(key=lambda x: x[0],reverse=True)
+    acc_movies = movies_found[:8]
+    return acc_movies
+
+def get_wordnet_pos(pos_tag):
+    if pos_tag.startswith('J'):
+        return wordnet.ADJ
+    elif pos_tag.startswith('V'):
+        return 'v'
+        #return wordnet.VERB
+    elif pos_tag.startswith('N'):
+        return wordnet.NOUN
+    elif pos_tag.startswith('R'):
+        return wordnet.ADV
+    else:
+        return 'n'
+
+
+class MoviePlotSearch(Action):
+    def name(self) -> Text:
+        return "action_movie_search"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        current_plot = tracker.latest_message.get("text")
+        if not current_plot or current_plot == '':
+            msg = "It seems you haven't written any plot for me to look up"
+            dispatcher.utter_message(text=msg)
+            return []
+        movies = MoviePlotCSV(current_plot)
+        data=[]
+        for movie in movies:
+            data.append(
+                {"title": movie[1]+ ", "+movie[2] + ", Match:"+ movie[0]+"%", "description": movie[3]})
+
+        message = {"payload": "cardsCarousel", "data": data}
+        dispatcher.utter_message(text="Here are the movies i found, from most accurate to least:\n", json_message=message)
+        dispatcher.utter_message("Are any of those movies the one you were looking for ?")
+        return []
