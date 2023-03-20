@@ -14,7 +14,7 @@
    <tr>
    <td>
    This project has been developed and conceived only as a learning project and corresponds to a graduation project for the specialty artificial intelligence.
-   The goal of the project is to create a movie chatbot using an open source framework [Rasa](https://rasa.com). The bot includes voice recognition and transforms the processed text into a voice as well as a voice into a text.
+   The goal of the project is to create a movie chatbot using an open source framework <a href="https://rasa.com">Rasa</a>. The bot includes voice recognition and transforms the processed text into a voice as well as a voice into a text.
    </td>
    </tr>
 </table>
@@ -24,8 +24,10 @@
 
 ## Key Features
 
-kkk
-
+| Feature 1                    | Feature 2                    |
+|------------------------------|------------------------------|
+| ![screenshot](docs/gif1.gif) | ![screenshot](docs/gif2.gif) |
+| bla bla                      |                              |
 
 ## How to use
 
