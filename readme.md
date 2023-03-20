@@ -24,10 +24,20 @@
 
 ## Key Features
 
-| User Encouragement                                                                            | Movie Description                                                              | Movie by Director                                                                             | Movie Information                                                                             |
-|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| ![screenshot](docs/gif1.gif)                                                                  | ![screenshot](docs/gif2.gif)                                                   | ![screenshot](docs/gif3.gif)                                                                  | ![screenshot](docs/gif4.gif)                                                                  |
-| The bot encourages the user with a funny (comedy) movie if the user is in a bad mood          | The user can also get a description of the movie sent recently by the bot      | Тhe user can also specify the name of the director and the bot will send a dozen films        | By clicking on the desired movie, the user can send the copied number to get more information |
+| User Encouragement                                                                            | Movie Description                                                              | Movie by Director                                                                             |                                         |
+|-----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------| 
+| ![screenshot](docs/gif1.gif)                                                                  | ![screenshot](docs/gif2.gif)                                                   | ![screenshot](docs/gif3.gif)                                                                  | 
+| The bot encourages the user with a funny (comedy) movie if the user is in a bad mood          | The user can also get a description of the movie sent recently by the bot      | Тhe user can also specify the name of the director and the bot will send a dozen films        | 
+
+
+
+
+| Movie Information                                                                             |                  
+|-----------------------------------------------------------------------------------------------|
+| ![screenshot](docs/gif4.gif)                                                                  |
+| By clicking on the desired movie, the user can send the copied number to get more information |
+
+
 
 ## How to use
 
