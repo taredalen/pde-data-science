@@ -10,14 +10,13 @@
   <a href="#related">Related</a> •
   <a href="#license">License</a>
 </p>
-
-
 <table>
-<tr>
-<td>
-  A webapp using Quandl API to display history of stock growth in a given period of time. It helps predict the growth of stocks from the  charts of stock performace in any period of time. It helps to judge stocks, with the principle of momentum investing, which returns 1% per month on average.
-</td>
-</tr>
+   <tr>
+   <td>
+   This project has been developed and conceived only as a learning project and corresponds to a graduation project for the specialty artificial intelligence.
+   The goal of the project is to create a movie chatbot using an open source framework [Rasa](https://rasa.com). The bot includes voice recognition and transforms the processed text into a voice as well as a voice into a text.
+   </td>
+   </tr>
 </table>
 
 
