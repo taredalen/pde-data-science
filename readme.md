@@ -1,11 +1,27 @@
 <h1 align="center">
   <a href="bot.svg"><img src="bot.svg" alt="Markdownify" width="200"></a>
   <br>
-  Construction and deployment of an open-source chatbot with rasa and the NLP
+  Open-source chatbot with Rasa and the NLP
   <br>
 </h1>
 
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#download">Download</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#related">Related</a> •
+  <a href="#license">License</a>
+</p>
 
+
+
+# Key Features
+
+kkk
+
+
+# How to use
 
 1. In terminal 1 (from chatbot):
     ````yml
