@@ -7,6 +7,7 @@
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
+  <a href="#architecture">Architecture</a> •
   <a href="#related">Related</a> •
   <a href="#license">License</a>
 </p>
@@ -18,7 +19,6 @@
    </td>
    </tr>
 </table>
-
 
 
 
@@ -47,6 +47,15 @@
     ````
 5. For API configuration you need to generate token and add to .env file.
  
+
+## Architecture
+
+<a href="#key-features">Back to top</a>
+
+<a><img src="docs/rasa-arch.png" width="600"></a>   
+
+
+
 ## Related
 
 - [TMDB for python](https://github.com/AnthonyBloomer/tmdbv3api): TMDB API for movie requests
