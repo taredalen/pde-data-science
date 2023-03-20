@@ -1,10 +1,4 @@
 rules:
-
-- rule: Greet the user in Telegram
-  steps:
-  - intent: start
-  - action: utter_greet
-
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
