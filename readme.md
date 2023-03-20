@@ -1,3 +1,4 @@
+# 
 <h1 align="center">
   <a href="docs/bot.svg"><img src="docs/bot.svg" alt="Markdownify" width="200"></a>
   <br>
@@ -50,7 +51,7 @@
 
 ## Architecture
 
-<a href="#key-features">Back to top</a>
+<a href="#">Back to top</a>
 
 <a><img src="docs/rasa-arch.png" width="600"></a>   
 
