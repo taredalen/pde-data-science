@@ -1,4 +1,3 @@
-# 
 <h1 align="center">
   <a href="docs/bot.svg"><img src="docs/bot.svg" alt="Markdownify" width="200"></a>
   <br>
@@ -51,7 +50,7 @@
 
 ## Architecture
 
-<a href="#">Back to top</a>
+<a href="#key-features">(Back to top)</a>
 
 <a><img src="docs/rasa-arch.png" width="600"></a>   
 
@@ -62,3 +61,4 @@
 - [TMDB for python](https://github.com/AnthonyBloomer/tmdbv3api): TMDB API for movie requests
 - [TMDB API](https://developers.themoviedb.org/3): get started and generate a key
 
+<a href="#key-features">(Back to top)</a>
