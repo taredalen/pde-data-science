@@ -31,7 +31,7 @@ entities:
 
 
 forms:
-  get_adress_form:
+  get_address_form:
     required_slots:
     - country
     - city
@@ -86,7 +86,7 @@ slots:
       - type: from_text
         entity: country
         conditions:
-          - active_loop: get_adress_form
+          - active_loop: get_address_form
             requested_slot: country
   city:
     type: text
@@ -95,7 +95,7 @@ slots:
       - type: from_text
         entity: city
         conditions:
-          - active_loop: get_adress_form
+          - active_loop: get_address_form
             requested_slot: city
   address:
     type: text
@@ -104,7 +104,7 @@ slots:
       - type: from_text
         entity: address
         conditions:
-          - active_loop: get_adress_form
+          - active_loop: get_address_form
             requested_slot: address
   confirm_address:
     type: bool
@@ -113,13 +113,13 @@ slots:
         intent: affirm
         value: true
         conditions:
-          - active_loop: get_adress_form
+          - active_loop: get_address_form
             requested_slot: confirm_address
       - type: from_intent
         intent: deny
         value: false
         conditions:
-          - active_loop: get_adress_form
+          - active_loop: get_address_form
             requested_slot: confirm_address
 
 
@@ -211,4 +211,3 @@ actions:
   - action_get_movie_recommendation_director_based
   - action_get_movie_information
   - action_get_cinema_near
-  - action_movie_search

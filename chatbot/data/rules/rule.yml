@@ -1,3 +1,5 @@
+version: "3.1"
+
 rules:
 - rule: Say goodbye anytime the user says goodbye
   steps:
@@ -12,8 +14,8 @@ rules:
 - rule: activate get_address_form
   steps:
     - intent: ask_for_cinema_nearby   # intent that triggers form activation
-    - action: get_adress_form      # run the form
-    - active_loop: get_adress_form
+    - action: get_address_form      # run the form
+    - active_loop: get_address_form
 
 - rule: submit get_address_form
   condition:

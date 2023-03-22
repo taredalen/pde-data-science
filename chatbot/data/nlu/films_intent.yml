@@ -289,9 +289,7 @@ nlu:
   - regex: id
     examples: |
       - [0-9]+
-  - regex: plot
-    examples: | 
-      - \"'.*'.*\"
+
   - intent: movie_watched_recently
     examples: |
       - I want to see something like ["Dr. Strangelove"](film)
@@ -363,3 +361,33 @@ nlu:
       - help me look for a movie with a description
       - help me find this movie i can't remember the name of
       - Help me find the title to a movie i've watched
+
+
+  - intent: movie_plot
+    examples: |
+      - It was about [a dog and a little girl](plot)
+      - It was about [a genie](plot)
+      - It was about [John Kennedy](plot)
+      - It was about [a man and his family going to a isolated hotel and going mad and trying to kill them](plot)
+      - It was about [a serial killer named Jack that has OCD and it shows how his mental illness impacts his killings](plot)
+      - It was about [a serial killer named Jack with OCD](plot)
+      - I don't remember everything but there was [a group of teenagers hunting for monsters and ghosts. They had a van that was green and blue](plot)
+      - It was about [a young couple going to a festival in Sweden with some friends and it turning out to be a cult] (plot)
+      - It was about [a cult in Sweden](plot)
+      - It was about [halloween and christmas](plot)
+      - It was about [a poor family scamming a rich family](plot)
+      - I think it was about [](plot)
+
+  - lookup: plot
+    examples: |    
+      - a dog and a little girl
+      - a genie
+      - santas claus
+      - John Kennedy
+      - Michael Jackson
+      - a spaceship
+      - a man getting bit by a spider and having super powers, shooting webs and fighting evil
+      - a man and his family going to a recluse house and going mad and trying to kill them
+      - a young couple going to a festival in Sweden with some friends and it turning out to be a cult
+      - a serial killer named Jack that has OCD and it shows how his mental illness impacts his killings
+      - a group of teenagers hunting for monsters and ghosts. They had a van that was green and blue

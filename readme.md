@@ -8,8 +8,7 @@
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#architecture">Architecture</a> •
-  <a href="#related">Related</a> •
-  <a href="#license">License</a>
+  <a href="#related">Related</a> 
 </p>
 <table>
    <tr>
@@ -33,24 +32,35 @@
 
 ## How to use
 
-1. In terminal 1 (from chatbot):
+1. First at all, train your model: 
+    ````yml
+    rasa train
+    ````   
+2. Check if project data is validated:
+   ````yml
+   rasa data validate
+   ````
+3. Then in terminal 1 (from chatbot):
     ````yml
     rasa run --enable-api --cors "*"
     ````
-2. In terminal 2 start server (from chatbot): 
+4. In terminal 2 start server (from chatbot): 
     ````yml
     rasa run actions
     ````
-3. Finally, open server page:
+5. Finally, open server page:
     ````yml
     python widget/server.py
     ````
-5. For API configuration you need to generate token and add to .env file.
- 
+6. For API configuration you need to generate token and add to .env file.
+
+
 
 ## Architecture
 
 <a href="#key-features">(Back to top)</a>
+
+There are two docker files in the chatbot folder, one for Rasa Core and one far Rasa Action, so you can create an image for more convenient use.
 
 <a><img src="docs/rasa-arch.png" width="600"></a>   
 

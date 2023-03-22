@@ -72,29 +72,13 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: happy path + plot + movie title correct
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_help_2
-  - intent: ask_movie_no_title
-  - action: utter_plot
-  - intent: movie_plot
-    entities:
-      - plot: from_entity
-  - action: action_movie_search
-  - intent: affirm
-  - action: utter_help_1
-  - intent: deny
-  - action: utter_goodbye
 
 
 - story: interactive_story_1
   steps:
   - intent: ask_for_cinema_nearby
-  - action: get_adress_form
-  - active_loop: get_adress_form
+  - action: get_address_form
+  - active_loop: get_address_form
   - slot_was_set:
     - requested_slot: country
   - slot_was_set:
@@ -124,8 +108,8 @@ stories:
   - slot_was_set:
     - confirm_address: null
   - intent: affirm
-  - action: get_adress_form
-  - active_loop: get_adress_form
+  - action: get_address_form
+  - active_loop: get_address_form
   - slot_was_set:
     - requested_slot: country
   - slot_was_set:
@@ -152,8 +136,8 @@ stories:
 - story: interactive_story_2
   steps:
   - intent: ask_for_cinema_nearby
-  - action: get_adress_form
-  - active_loop: get_adress_form
+  - action: get_address_form
+  - active_loop: get_address_form
   - slot_was_set:
     - requested_slot: country
   - slot_was_set:
@@ -177,3 +161,19 @@ stories:
   - intent: smalltalk_appraisal_thank_you
   - action: utter_smalltalk_appraisal_well_done
 
+- story: happy path + plot + movie title correct
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_help_2
+  - intent: ask_movie_no_title
+  - action: utter_plot
+  - intent: movie_plot
+    entities:
+      - plot: from_entity
+  - action: action_movie_search
+  - intent: affirm
+  - action: utter_help_1
+  - intent: deny
+  - action: utter_goodbye
