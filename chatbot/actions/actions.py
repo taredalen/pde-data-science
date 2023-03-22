@@ -1,4 +1,5 @@
 import os
+import socket
 import time
 import random
 import pandas as pd
@@ -67,6 +68,10 @@ genres_list = [
 ]
 
 df_db = pd.read_csv(os.getcwd() + "/csv/movie_plot_pro.csv", sep=',')
+
+# ----------------------------------------------------------------------------------------------------------------------
+socks = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+socks.settimeout(None) # set timeout is the attr of socks.
 # ----------------------------------------------------------------------------------------------------------------------
 class Movie:
     def __init__(self, description, title):
@@ -339,11 +344,11 @@ def MoviePlotCSV(plot):
         name = df_db.at[i, 'Title']
         year = df_db.at[i, 'Release Year']
         wiki = df_db.at[i, 'Wiki Page']
-        movies_found.append((str(percent), name, str(year), wiki))
+        if percent > 50:
+            movies_found.append((str(percent), name, str(year), wiki))
         movies_found.sort(key=lambda x: x[0], reverse=True)
     acc_movies = movies_found[:8]
     return acc_movies
-
 
 class MoviePlotSearch(Action):
     def name(self) -> Text:
@@ -360,9 +365,9 @@ class MoviePlotSearch(Action):
         movies = MoviePlotCSV(current_plot)
         data = []
         for movie in movies:
-            # dispatcher.utter_message(f"This cinema is near:\n{cinema[1]}\n{cinema[2]}")
             data.append(
-                {"Title: ": movie[1] + ", " + movie[2] + ", Match: " + movie[0] + "%", "Description: ": movie[3]})
+                {"title": movie[1] + ", " + movie[2] + ", Match: " + movie[0] + "%",
+                 "description": movie[3]})
 
         message = {"payload": "collapsible", "data": data}
         dispatcher.utter_message(text="Here are the movies i found, from most accurate to least:\n",
